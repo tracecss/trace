@@ -25,11 +25,12 @@
     "prepack": "pnpm check && pnpm build",
     "check:package": "node scripts/check-package.js"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CSS library for native HTML elements, design tokens, and light and dark themes.",
   "files": [
     "dist",
-    "src"
+    "src",
+    "assets/trace-logo.svg"
   ],
   "style": "./dist/trace.css",
   "exports": {

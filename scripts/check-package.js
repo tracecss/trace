@@ -18,6 +18,7 @@ for (const name of ["trace", "trace.classless"]) {
   }
 }
 for (const path of [
+  "assets/trace-logo.svg",
   "README.md",
   "LICENSE",
   "src/index.css",
@@ -27,7 +28,7 @@ for (const path of [
 }
 for (const path of files) {
   assert(
-    /^(dist\/[^/]+\.css|src\/.+\.css|package\.json|README\.md|LICENSE)$/.test(
+    /^(dist\/[^/]+\.css|src\/.+\.css|assets\/trace-logo\.svg|package\.json|README\.md|LICENSE)$/.test(
       path,
     ),
     `Unexpected package file: ${path}`,

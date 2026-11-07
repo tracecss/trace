@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" fill="none">
+  <title>Trace leaf logo</title>
+  <defs>
+    <linearGradient id="leaf-gradient" x1="62" y1="190" x2="264" y2="51" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#005473"/>
+      <stop offset="0.3" stop-color="#095976"/>
+      <stop offset="1" stop-color="#60AF9E"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#leaf-gradient)" d="M113 7C94 7 79 36 79 61C79 77 83 93 87 107C66 87 42 66 28 65C9 63 6 86 12 103C19 122 36 139 54 153C35 149 12 150 3 158C-5 165 0 175 12 180C37 192 75 192 96 201C101 203 104 205 105 207C102 224 100 244 107 253C112 261 131 257 140 251C146 247 143 225 149 207C157 208 165 208 174 205C219 199 273 187 298 169C309 162 309 152 302 145C290 132 264 134 239 142C258 123 281 98 289 82C296 68 290 56 276 53C258 50 237 62 213 78C223 55 228 35 219 23C209 10 189 10 172 22C157 32 147 50 141 78C139 53 137 26 128 13C124 8 119 7 113 7Z" transform="translate(7 29)"/>
+</svg>
