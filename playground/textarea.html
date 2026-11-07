@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Textarea</title>
+    <script src="./playground.js"></script>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a>
+      <a href="./all.html">All components</a>
+    </header>
+    <main data-theme-preview>
+      <div data-mode="light" aria-label="Light theme">
+        <h3>Classless</h3>
+        <div data-input-examples>
+          <label
+            >Comment<textarea
+              rows="3"
+              placeholder="Write a few lines"
+            ></textarea></label
+          ><label
+            >Invalid<textarea rows="2" aria-invalid="true">
+Check the message</textarea
+            ><small>The message contains an error.</small></label
+          ><label
+            >Disabled<textarea rows="2" disabled>Disabled text</textarea></label
+          ><label
+            >Read-only<textarea rows="2" readonly>
+You can select this text.</textarea>
+          </label>
+        </div>
+        <h3>Extensions</h3>
+        <div data-input-examples>
+          <label
+            >Small<textarea
+              class="trace-small"
+              rows="2"
+              placeholder="Small"
+            ></textarea></label
+          ><label
+            >Large<textarea
+              class="trace-large"
+              rows="2"
+              placeholder="Large"
+            ></textarea>
+          </label>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <div data-input-examples>
+            <label
+              >تعليق<textarea
+                rows="3"
+                placeholder="اكتب بضعة أسطر"
+              ></textarea></label
+            ><label
+              >غير صالح<textarea rows="2" aria-invalid="true">
+تحقق من الرسالة</textarea
+              ><small>تحتوي الرسالة على خطأ.</small></label
+            ><label
+              >غير متاح<textarea rows="2" disabled>نص غير متاح</textarea></label
+            ><label
+              >للقراءة فقط<textarea rows="2" readonly>
+يمكنك تحديد هذا النص.</textarea>
+            </label>
+          </div>
+          <h3>امتدادات</h3>
+          <div data-input-examples>
+            <label
+              >صغير<textarea
+                class="trace-small"
+                rows="2"
+                placeholder="صغير"
+              ></textarea></label
+            ><label
+              >كبير<textarea
+                class="trace-large"
+                rows="2"
+                placeholder="كبير"
+              ></textarea>
+            </label>
+          </div>
+        </section>
+      </div>
+      <div data-mode="dark" aria-label="Dark theme">
+        <h3>Classless</h3>
+        <div data-input-examples>
+          <label
+            >Comment<textarea
+              rows="3"
+              placeholder="Write a few lines"
+            ></textarea></label
+          ><label
+            >Invalid<textarea rows="2" aria-invalid="true">
+Check the message</textarea
+            ><small>The message contains an error.</small></label
+          ><label
+            >Disabled<textarea rows="2" disabled>Disabled text</textarea></label
+          ><label
+            >Read-only<textarea rows="2" readonly>
+You can select this text.</textarea>
+          </label>
+        </div>
+        <h3>Extensions</h3>
+        <div data-input-examples>
+          <label
+            >Small<textarea
+              class="trace-small"
+              rows="2"
+              placeholder="Small"
+            ></textarea></label
+          ><label
+            >Large<textarea
+              class="trace-large"
+              rows="2"
+              placeholder="Large"
+            ></textarea>
+          </label>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <div data-input-examples>
+            <label
+              >تعليق<textarea
+                rows="3"
+                placeholder="اكتب بضعة أسطر"
+              ></textarea></label
+            ><label
+              >غير صالح<textarea rows="2" aria-invalid="true">
+تحقق من الرسالة</textarea
+              ><small>تحتوي الرسالة على خطأ.</small></label
+            ><label
+              >غير متاح<textarea rows="2" disabled>نص غير متاح</textarea></label
+            ><label
+              >للقراءة فقط<textarea rows="2" readonly>
+يمكنك تحديد هذا النص.</textarea>
+            </label>
+          </div>
+          <h3>امتدادات</h3>
+          <div data-input-examples>
+            <label
+              >صغير<textarea
+                class="trace-small"
+                rows="2"
+                placeholder="صغير"
+              ></textarea></label
+            ><label
+              >كبير<textarea
+                class="trace-large"
+                rows="2"
+                placeholder="كبير"
+              ></textarea>
+            </label>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

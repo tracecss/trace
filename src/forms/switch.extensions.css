@@ -1,0 +1,122 @@
+@layer trace.extensions {
+  :where(label:has(> .trace-switch > input[type="checkbox"][role="switch"])) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+
+  :where(
+    label:has(> .trace-switch > input[type="checkbox"][role="switch"]:disabled)
+  ) {
+    cursor: not-allowed;
+  }
+
+  :where(.trace-switch) {
+    position: relative;
+    display: inline-flex;
+    flex-shrink: 0;
+    vertical-align: middle;
+    transition: transform 250ms ease-in-out;
+  }
+
+  :where(.trace-switch > .trace-icon) {
+    --trace-icon-size: var(--trace-switch-icon-size, 0.75rem);
+    position: absolute;
+    inset-inline-end: calc(4px + var(--trace-switch-padding));
+    inset-block: 0;
+    margin-block: auto;
+    color: var(--trace-switch-color);
+    pointer-events: none;
+    transition: color 200ms ease-in-out;
+  }
+
+  :where(.trace-switch:has(> input:checked) > .trace-icon) {
+    inset-inline-start: calc(4px + var(--trace-switch-padding));
+    inset-inline-end: auto;
+    color: var(
+      --trace-switch-dot-checked,
+      var(--trace-switch-bg, var(--trace-control-bg))
+    );
+  }
+
+  :where(
+    .trace-switch:has(> input:disabled) > .trace-icon,
+    label > .trace-switch:has(> input:disabled) ~ span
+  ) {
+    opacity: 0.5;
+  }
+
+  :where(.trace-switch:has(> input:disabled)) {
+    cursor: not-allowed;
+  }
+
+  :where(.trace-switch > input[type="checkbox"][role="switch"]) {
+    transform: none;
+  }
+
+  :where(
+    .trace-switch:has(> input:active:not(:disabled)),
+    label:active > .trace-switch:has(> input:not(:disabled))
+  ) {
+    transform: scale(0.9);
+  }
+
+  :where(
+    label:active > .trace-switch > input[role="switch"]:not(:disabled)
+  )::before {
+    inline-size: var(--trace-switch-dot-active-size);
+  }
+
+  :where(
+    label:active > .trace-switch > input[role="switch"]:checked:not(:disabled)
+  )::before {
+    inset-inline-start: calc(
+      100% - var(--trace-switch-dot-active-size) - var(--trace-switch-padding)
+    );
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :where(.trace-switch) {
+      transition: none;
+      transform: none;
+    }
+
+    :where(.trace-switch > .trace-icon) {
+      transition: none;
+      transform: none;
+    }
+  }
+
+  @media (forced-colors: active) {
+    :where(.trace-switch > .trace-icon) {
+      display: none;
+    }
+  }
+
+  :where(.trace-switch:has(> input[aria-invalid="true"])) {
+    --trace-switch-color: var(--trace-danger);
+  }
+
+  :where(.trace-switch:has(> input.trace-small) > .trace-icon) {
+    display: none;
+  }
+
+  :where(.trace-switch:has(> input.trace-large)) {
+    --trace-switch-icon-size: 1rem;
+  }
+
+  :where(input[type="checkbox"][role="switch"].trace-small) {
+    --trace-switch-width: 1.75rem;
+    --trace-switch-height: 1rem;
+    --trace-switch-dot-size: 0.5rem;
+    --trace-switch-dot-active-size: 0.625rem;
+  }
+
+  :where(input[type="checkbox"][role="switch"].trace-large) {
+    --trace-switch-width: 2.625rem;
+    --trace-switch-height: 1.5rem;
+    --trace-switch-dot-size: 1rem;
+    --trace-switch-dot-active-size: 1.125rem;
+  }
+}

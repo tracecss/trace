@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Palette</title>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a><a href="./all.html">All components</a>
+    </header>
+    <main>
+      <h1>Palette</h1>
+      <p>
+        Color tokens and their derived shades. Theme colors adapt to the light
+        and dark panels.
+      </p>
+      <div data-theme-preview>
+        <div data-mode="light" aria-label="Light theme">
+          <h2>Light theme</h2>
+          <section>
+            <h3>Theme</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-bg)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-bg</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-control-bg)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-control-bg</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-text)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-text</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Primary</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-primary-lighter)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-primary-lighter</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-primary-light)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-primary-light</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-primary)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-primary</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-primary-dark)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-primary-dark</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-primary-darker)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-primary-darker</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Secondary</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-secondary-lighter)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-secondary-lighter</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-secondary-light)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-secondary-light</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-secondary)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-secondary</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-secondary-dark)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-secondary-dark</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-secondary-darker)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-secondary-darker</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Neutral</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-neutral-lighter)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-neutral-lighter</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-neutral-light)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-neutral-light</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-neutral)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-neutral</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-neutral-dark)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-neutral-dark</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-neutral-darker)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-neutral-darker</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Status</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-success)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-success</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-danger)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-danger</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Backgrounds</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-bg-light)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-bg-light</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-bg-dark)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-bg-dark</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Text</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-text-light)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-text-light</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-text-dark)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-text-dark</code>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div data-mode="dark" aria-label="Dark theme">
+          <h2>Dark theme</h2>
+          <section>
+            <h3>Theme</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-bg)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-bg</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-control-bg)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-control-bg</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-text)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-text</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Primary</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-primary-lighter)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-primary-lighter</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-primary-light)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-primary-light</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-primary)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-primary</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-primary-dark)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-primary-dark</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-primary-darker)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-primary-darker</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Secondary</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-secondary-lighter)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-secondary-lighter</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-secondary-light)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-secondary-light</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-secondary)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-secondary</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-secondary-dark)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-secondary-dark</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-secondary-darker)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-secondary-darker</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Neutral</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-neutral-lighter)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-neutral-lighter</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-neutral-light)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-neutral-light</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-neutral)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-neutral</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-neutral-dark)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-neutral-dark</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-neutral-darker)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-neutral-darker</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Status</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-success)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-success</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-danger)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-danger</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Backgrounds</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-bg-light)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-bg-light</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-bg-dark)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-bg-dark</code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Text</h3>
+            <ul data-palette-colors>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-text-light)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-text-light</code>
+              </li>
+              <li>
+                <span
+                  data-palette-swatch
+                  style="--trace-palette-color: var(--trace-text-dark)"
+                  aria-hidden="true"
+                ></span
+                ><code>--trace-text-dark</code>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

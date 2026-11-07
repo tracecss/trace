@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Checkbox</title>
+    <script src="./playground.js"></script>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a>
+      <a href="./all.html">All components</a>
+    </header>
+    <main data-theme-preview>
+      <div data-mode="light" aria-label="Light theme">
+        <h3>Classless</h3>
+        <div data-form-examples>
+          <label><input type="checkbox" /> Default</label
+          ><label><input type="checkbox" checked /> Checked</label
+          ><label
+            ><input type="checkbox" data-indeterminate /> Indeterminate</label
+          ><label><input type="checkbox" disabled /> Disabled</label
+          ><label
+            ><input type="checkbox" checked disabled /> Checked and
+            disabled</label
+          ><label><input type="checkbox" aria-invalid="true" /> Invalid</label>
+        </div>
+        <h3>Extensions</h3>
+        <div data-form-examples>
+          <label><input type="checkbox" class="trace-small" /> Small</label
+          ><label><input type="checkbox" /> Medium</label
+          ><label><input type="checkbox" class="trace-large" /> Large</label>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>Classless</h3>
+          <div data-form-examples>
+            <label><input type="checkbox" /> افتراضي</label
+            ><label><input type="checkbox" checked /> محدد</label
+            ><label
+              ><input type="checkbox" data-indeterminate /> حالة مختلطة</label
+            ><label><input type="checkbox" disabled /> غير متاح</label
+            ><label
+              ><input type="checkbox" checked disabled /> محدد وغير متاح</label
+            ><label
+              ><input type="checkbox" aria-invalid="true" /> غير صالح</label
+            >
+          </div>
+          <h3>Extensions</h3>
+          <div data-form-examples>
+            <label><input type="checkbox" class="trace-small" /> صغير</label
+            ><label><input type="checkbox" /> متوسط</label
+            ><label><input type="checkbox" class="trace-large" /> كبير</label>
+          </div>
+        </section>
+      </div>
+      <div data-mode="dark" aria-label="Dark theme">
+        <h3>Classless</h3>
+        <div data-form-examples>
+          <label><input type="checkbox" /> Default</label
+          ><label><input type="checkbox" checked /> Checked</label
+          ><label
+            ><input type="checkbox" data-indeterminate /> Indeterminate</label
+          ><label><input type="checkbox" disabled /> Disabled</label
+          ><label
+            ><input type="checkbox" checked disabled /> Checked and
+            disabled</label
+          ><label><input type="checkbox" aria-invalid="true" /> Invalid</label>
+        </div>
+        <h3>Extensions</h3>
+        <div data-form-examples>
+          <label><input type="checkbox" class="trace-small" /> Small</label
+          ><label><input type="checkbox" /> Medium</label
+          ><label><input type="checkbox" class="trace-large" /> Large</label>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>Classless</h3>
+          <div data-form-examples>
+            <label><input type="checkbox" /> افتراضي</label
+            ><label><input type="checkbox" checked /> محدد</label
+            ><label
+              ><input type="checkbox" data-indeterminate /> حالة مختلطة</label
+            ><label><input type="checkbox" disabled /> غير متاح</label
+            ><label
+              ><input type="checkbox" checked disabled /> محدد وغير متاح</label
+            ><label
+              ><input type="checkbox" aria-invalid="true" /> غير صالح</label
+            >
+          </div>
+          <h3>Extensions</h3>
+          <div data-form-examples>
+            <label><input type="checkbox" class="trace-small" /> صغير</label
+            ><label><input type="checkbox" /> متوسط</label
+            ><label><input type="checkbox" class="trace-large" /> كبير</label>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+@layer trace.elements {
+  :where(:root) {
+    --trace-table-text: var(--trace-text);
+    --trace-table-accent: light-dark(
+      var(--trace-primary),
+      var(--trace-secondary)
+    );
+    --trace-table-border: color-mix(
+      in oklch,
+      var(--trace-table-accent),
+      transparent 78%
+    );
+    --trace-table-header-bg: transparent;
+    --trace-table-header-text: var(--trace-table-accent);
+    --trace-table-row-heading: var(--trace-table-text);
+    --trace-table-footer-bg: transparent;
+    --trace-table-stripe-bg: color-mix(
+      in oklch,
+      var(--trace-table-accent),
+      transparent 97%
+    );
+    --trace-table-hover-bg: light-dark(
+      color-mix(in oklch, var(--trace-primary), transparent 93%),
+      color-mix(in oklch, var(--trace-secondary), transparent 90%)
+    );
+    --trace-table-radius: 0;
+    --trace-table-padding-block: 0.75rem;
+    --trace-table-padding-inline: 0.75rem;
+    --trace-table-font-size: 1rem;
+    --trace-table-line-height: 1.5;
+  }
+
+  :where(table) {
+    inline-size: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: var(--trace-table-text);
+    font-size: var(--trace-table-font-size);
+    line-height: var(--trace-table-line-height);
+    text-align: start;
+  }
+
+  :where(table > caption) {
+    padding-block: 0 1rem;
+    padding-inline: 0;
+    caption-side: top;
+    text-align: start;
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+
+  :where(
+    table > :is(thead, tbody, tfoot) > tr > :is(th, td),
+    table > tr > :is(th, td)
+  ) {
+    padding: var(--trace-table-padding-block) var(--trace-table-padding-inline);
+    border-block-end: 1px solid var(--trace-table-border);
+    vertical-align: top;
+    text-align: inherit;
+  }
+
+  :where(table > :is(thead, tbody, tfoot) > tr > th, table > tr > th) {
+    font-weight: 600;
+  }
+
+  :where(table > thead > tr > :is(th, td)) {
+    background-color: var(--trace-table-header-bg);
+    color: var(--trace-table-header-text);
+    border-block-end: 2px solid var(--trace-table-accent);
+    vertical-align: middle;
+    font-size: 0.875em;
+    letter-spacing: normal;
+  }
+
+  :where(table > tbody > tr > th) {
+    color: var(--trace-table-row-heading);
+  }
+
+  :where(table > thead > tr:first-child > :first-child) {
+    border-start-start-radius: var(--trace-table-radius);
+  }
+
+  :where(table > thead > tr:first-child > :last-child) {
+    border-start-end-radius: var(--trace-table-radius);
+  }
+
+  :where(
+    table:has(> tfoot) > tbody:last-of-type > tr:last-child > :is(th, td)
+  ) {
+    border-block-end: 0;
+  }
+
+  :where(table > tfoot > tr > :is(th, td)) {
+    background-color: var(--trace-table-footer-bg);
+    color: var(--trace-table-accent);
+    border-block-start: 2px solid var(--trace-table-accent);
+    border-block-end: 0;
+    font-weight: 600;
+  }
+  :where(table > tfoot > tr:last-child > :first-child) {
+    border-end-start-radius: var(--trace-table-radius);
+  }
+
+  :where(table > tfoot > tr:last-child > :last-child) {
+    border-end-end-radius: var(--trace-table-radius);
+  }
+}

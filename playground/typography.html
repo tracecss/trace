@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Typography</title>
+    <script src="./playground.js"></script>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a>
+      <a href="./all.html">All components</a>
+    </header>
+    <main data-theme-preview>
+      <div data-mode="light" aria-label="Light theme">
+        <h3>Classless</h3>
+        <h1>Heading level 1</h1>
+        <h2>Heading level 2</h2>
+        <h3>Heading level 3</h3>
+        <h4>Heading level 4</h4>
+        <h5>Heading level 5</h5>
+        <h6>Heading level 6</h6>
+
+        <p>
+          Regular text, <strong>an important thought</strong>,
+          <em>emphasis</em> and <mark>highlighted text</mark>.
+        </p>
+        <p>
+          <small>Additional information</small> ·
+          <code>--trace-font-body</code> · <kbd>⌘</kbd> + <kbd>K</kbd>
+        </p>
+        <p>
+          <b>Bold text</b>, <i>italic text</i>, and a reference to
+          <cite>The Elements of Typographic Style</cite>.
+        </p>
+        <p>
+          <abbr title="HyperText Markup Language">HTML</abbr> includes
+          <del>deleted text</del>, <s>outdated text</s>,
+          <ins>inserted text</ins>, and <u>annotated text</u>.
+        </p>
+        <p>Water: H<sub>2</sub>O. Area: 10 m<sup>2</sup>.</p>
+        <pre><code>const message = "Hello, world!";
+console.log(message);</code></pre>
+        <p>Program output: <samp>Hello, world!</samp></p>
+        <blockquote>
+          <p>A good interface starts with clear content.</p>
+          <p>Typography makes the message easier to read.</p>
+          <footer>— <cite>Sample design notes</cite></footer>
+        </blockquote>
+        <blockquote>
+          <p>A short quotation without a source caption.</p>
+        </blockquote>
+        <ul>
+          <li>First item</li>
+          <li>Second item</li>
+        </ul>
+        <ol>
+          <li>First step</li>
+          <li>Second step</li>
+        </ol>
+        <dl>
+          <dt>Typography</dt>
+          <dd>The arrangement of text for clear reading.</dd>
+          <dt>Line height</dt>
+          <dd>The vertical spacing between lines of text.</dd>
+        </dl>
+
+        <hr />
+
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3 lang="en">Classless</h3>
+          <h1>عنوان من المستوى الأول</h1>
+          <h2>عنوان من المستوى الثاني</h2>
+          <h3>عنوان من المستوى الثالث</h3>
+          <h4>عنوان من المستوى الرابع</h4>
+          <h5>عنوان من المستوى الخامس</h5>
+          <h6>عنوان من المستوى السادس</h6>
+          <p>
+            نص عادي، <strong>وفكرة مهمة</strong>، و<em>تأكيد</em>، و<mark
+              >جزء مميز من النص</mark
+            >.
+          </p>
+          <p>
+            <small>معلومات إضافية</small> ·
+            <code dir="ltr">--trace-font-body</code> · <kbd>⌘</kbd> +
+            <kbd>K</kbd>
+          </p>
+          <p>
+            <b>نص عريض</b>، و<i>نص مائل</i>، وإشارة إلى
+            <cite>عناصر الأسلوب الطباعي</cite>.
+          </p>
+          <p>
+            تتضمن
+            <abbr title="لغة ترميز النص التشعبي"><bdi>HTML</bdi></abbr> أمثلة
+            على <del>نص محذوف</del>، و<s>نص قديم</s>، و<ins>نص مضاف</ins>، و<u
+              >نص تحته خط</u
+            >.
+          </p>
+          <p>
+            الماء: <bdi dir="ltr">H<sub>2</sub>O</bdi>. المساحة:
+            <bdi dir="ltr">10 m<sup>2</sup></bdi
+            >.
+          </p>
+          <pre dir="ltr"><code>const message = "مرحبًا بالعالم!";
+console.log(message);</code></pre>
+          <p>مخرجات البرنامج: <samp>مرحبًا بالعالم!</samp></p>
+          <blockquote>
+            <p>تبدأ الواجهة الجيدة بمحتوى واضح.</p>
+            <p>تجعل الطباعة الرسالة أسهل قراءة.</p>
+            <footer>— <cite>ملاحظات تصميم نموذجية</cite></footer>
+          </blockquote>
+          <blockquote><p>اقتباس قصير دون ذكر المصدر.</p></blockquote>
+          <ul>
+            <li>العنصر الأول</li>
+            <li>العنصر الثاني</li>
+          </ul>
+          <ol>
+            <li>الخطوة الأولى</li>
+            <li>الخطوة الثانية</li>
+          </ol>
+          <dl>
+            <dt>الطباعة</dt>
+            <dd>تنسيق النص لتسهيل القراءة.</dd>
+            <dt>ارتفاع السطر</dt>
+            <dd>المسافة الرأسية بين أسطر النص.</dd>
+          </dl>
+
+          <hr />
+        </section>
+      </div>
+      <div data-mode="dark" aria-label="Dark theme">
+        <h3>Classless</h3>
+        <h1>Heading level 1</h1>
+        <h2>Heading level 2</h2>
+        <h3>Heading level 3</h3>
+        <h4>Heading level 4</h4>
+        <h5>Heading level 5</h5>
+        <h6>Heading level 6</h6>
+
+        <p>
+          Regular text, <strong>an important thought</strong>,
+          <em>emphasis</em> and <mark>highlighted text</mark>.
+        </p>
+        <p>
+          <small>Additional information</small> ·
+          <code>--trace-font-body</code> · <kbd>⌘</kbd> + <kbd>K</kbd>
+        </p>
+        <p>
+          <b>Bold text</b>, <i>italic text</i>, and a reference to
+          <cite>The Elements of Typographic Style</cite>.
+        </p>
+        <p>
+          <abbr title="HyperText Markup Language">HTML</abbr> includes
+          <del>deleted text</del>, <s>outdated text</s>,
+          <ins>inserted text</ins>, and <u>annotated text</u>.
+        </p>
+        <p>Water: H<sub>2</sub>O. Area: 10 m<sup>2</sup>.</p>
+        <pre><code>const message = "Hello, world!";
+console.log(message);</code></pre>
+        <p>Program output: <samp>Hello, world!</samp></p>
+        <blockquote>
+          <p>A good interface starts with clear content.</p>
+          <p>Typography makes the message easier to read.</p>
+          <footer>— <cite>Sample design notes</cite></footer>
+        </blockquote>
+        <blockquote>
+          <p>A short quotation without a source caption.</p>
+        </blockquote>
+        <ul>
+          <li>First item</li>
+          <li>Second item</li>
+        </ul>
+        <ol>
+          <li>First step</li>
+          <li>Second step</li>
+        </ol>
+        <dl>
+          <dt>Typography</dt>
+          <dd>The arrangement of text for clear reading.</dd>
+          <dt>Line height</dt>
+          <dd>The vertical spacing between lines of text.</dd>
+        </dl>
+
+        <hr />
+
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3 lang="en">Classless</h3>
+          <h1>عنوان من المستوى الأول</h1>
+          <h2>عنوان من المستوى الثاني</h2>
+          <h3>عنوان من المستوى الثالث</h3>
+          <h4>عنوان من المستوى الرابع</h4>
+          <h5>عنوان من المستوى الخامس</h5>
+          <h6>عنوان من المستوى السادس</h6>
+          <p>
+            نص عادي، <strong>وفكرة مهمة</strong>، و<em>تأكيد</em>، و<mark
+              >جزء مميز من النص</mark
+            >.
+          </p>
+          <p>
+            <small>معلومات إضافية</small> ·
+            <code dir="ltr">--trace-font-body</code> · <kbd>⌘</kbd> +
+            <kbd>K</kbd>
+          </p>
+          <p>
+            <b>نص عريض</b>، و<i>نص مائل</i>، وإشارة إلى
+            <cite>عناصر الأسلوب الطباعي</cite>.
+          </p>
+          <p>
+            تتضمن
+            <abbr title="لغة ترميز النص التشعبي"><bdi>HTML</bdi></abbr> أمثلة
+            على <del>نص محذوف</del>، و<s>نص قديم</s>، و<ins>نص مضاف</ins>، و<u
+              >نص تحته خط</u
+            >.
+          </p>
+          <p>
+            الماء: <bdi dir="ltr">H<sub>2</sub>O</bdi>. المساحة:
+            <bdi dir="ltr">10 m<sup>2</sup></bdi
+            >.
+          </p>
+          <pre dir="ltr"><code>const message = "مرحبًا بالعالم!";
+console.log(message);</code></pre>
+          <p>مخرجات البرنامج: <samp>مرحبًا بالعالم!</samp></p>
+          <blockquote>
+            <p>تبدأ الواجهة الجيدة بمحتوى واضح.</p>
+            <p>تجعل الطباعة الرسالة أسهل قراءة.</p>
+            <footer>— <cite>ملاحظات تصميم نموذجية</cite></footer>
+          </blockquote>
+          <blockquote><p>اقتباس قصير دون ذكر المصدر.</p></blockquote>
+          <ul>
+            <li>العنصر الأول</li>
+            <li>العنصر الثاني</li>
+          </ul>
+          <ol>
+            <li>الخطوة الأولى</li>
+            <li>الخطوة الثانية</li>
+          </ol>
+          <dl>
+            <dt>الطباعة</dt>
+            <dd>تنسيق النص لتسهيل القراءة.</dd>
+            <dt>ارتفاع السطر</dt>
+            <dd>المسافة الرأسية بين أسطر النص.</dd>
+          </dl>
+
+          <hr />
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

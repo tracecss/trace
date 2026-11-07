@@ -1,0 +1,3784 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Buttons</title>
+    <script src="./playground.js"></script>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a>
+      <a href="./all.html">All components</a>
+    </header>
+    <main data-theme-preview>
+      <div data-mode="light" aria-label="Light theme">
+        <h3>Classless</h3>
+        <div data-button-examples>
+          <div data-button-states>
+            <input type="button" value="Button" /><input
+              type="button"
+              value="Button"
+              disabled
+            />
+          </div>
+          <div data-button-states>
+            <input type="submit" value="Submit" /><input
+              type="submit"
+              value="Submit"
+              disabled
+            />
+          </div>
+          <div data-button-states>
+            <input type="reset" value="Reset" /><input
+              type="reset"
+              value="Reset"
+              disabled
+            />
+          </div>
+        </div>
+        <div data-button-examples>
+          <div data-button-states>
+            <button type="button">Default</button
+            ><button type="button" disabled>Default</button
+            ><button type="button" data-loader-demo>Default</button>
+          </div>
+        </div>
+        <h3>Extensions</h3>
+        <div data-button-examples>
+          <div data-button-states>
+            <input
+              type="button"
+              value="Button"
+              class="trace-primary trace-small"
+            /><input
+              type="button"
+              value="Button"
+              class="trace-primary trace-small"
+              disabled
+            />
+          </div>
+          <div data-button-states>
+            <input type="submit" value="Submit" class="trace-primary" /><input
+              type="submit"
+              value="Submit"
+              class="trace-primary"
+              disabled
+            />
+          </div>
+          <div data-button-states>
+            <input type="reset" value="Reset" class="trace-secondary" /><input
+              type="reset"
+              value="Reset"
+              class="trace-secondary"
+              disabled
+            />
+          </div>
+        </div>
+        <div data-button-variants>
+          <div data-button-examples>
+            <div data-button-states aria-label="Primary solid text">
+              <div data-button-sizes>
+                <button type="button" class="trace-primary">Primary</button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-primary" disabled>
+                  Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-primary" data-loader-demo>
+                  Primary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Primary solid icon-text">
+              <div data-button-sizes>
+                <button type="button" class="trace-primary">
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-primary" disabled>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-primary" data-loader-demo>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Primary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Secondary solid text">
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary">Secondary</button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary" disabled>
+                  Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary" data-loader-demo>
+                  Secondary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Secondary solid icon-text">
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary">
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary" disabled>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary" data-loader-demo>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Secondary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Danger solid text">
+              <div data-button-sizes>
+                <button type="button" class="trace-danger">Danger</button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-danger" disabled>
+                  Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-danger" data-loader-demo>
+                  Danger
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Danger solid icon-text">
+              <div data-button-sizes>
+                <button type="button" class="trace-danger">
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-danger" disabled>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-danger" data-loader-demo>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Danger
+                </button>
+              </div>
+            </div>
+          </div>
+          <div data-button-examples>
+            <div data-button-states aria-label="Primary outline text">
+              <div data-button-sizes>
+                <button type="button" class="trace-primary trace-outline">
+                  Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline"
+                  disabled
+                >
+                  Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline"
+                  data-loader-demo
+                >
+                  Primary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Primary outline icon-text">
+              <div data-button-sizes>
+                <button type="button" class="trace-primary trace-outline">
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Primary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Secondary outline text">
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary trace-outline">
+                  Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline"
+                  disabled
+                >
+                  Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline"
+                  data-loader-demo
+                >
+                  Secondary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Secondary outline icon-text">
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary trace-outline">
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Secondary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Danger outline text">
+              <div data-button-sizes>
+                <button type="button" class="trace-danger trace-outline">
+                  Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline"
+                  disabled
+                >
+                  Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline"
+                  data-loader-demo
+                >
+                  Danger
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Danger outline icon-text">
+              <div data-button-sizes>
+                <button type="button" class="trace-danger trace-outline">
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Danger
+                </button>
+              </div>
+            </div>
+          </div>
+          <div data-button-examples>
+            <div data-button-states aria-label="Primary solid icon-only">
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-icon-only"
+                  aria-label="Primary"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-icon-only"
+                  aria-label="Primary"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-icon-only"
+                  aria-label="Primary"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Primary outline icon-only">
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline trace-icon-only"
+                  aria-label="Primary"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline trace-icon-only"
+                  aria-label="Primary"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline trace-icon-only"
+                  aria-label="Primary"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Secondary solid icon-only">
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-icon-only"
+                  aria-label="Secondary"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-icon-only"
+                  aria-label="Secondary"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-icon-only"
+                  aria-label="Secondary"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Secondary outline icon-only">
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline trace-icon-only"
+                  aria-label="Secondary"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline trace-icon-only"
+                  aria-label="Secondary"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline trace-icon-only"
+                  aria-label="Secondary"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Danger solid icon-only">
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-icon-only"
+                  aria-label="Danger"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-icon-only"
+                  aria-label="Danger"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-icon-only"
+                  aria-label="Danger"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Danger outline icon-only">
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline trace-icon-only"
+                  aria-label="Danger"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline trace-icon-only"
+                  aria-label="Danger"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline trace-icon-only"
+                  aria-label="Danger"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-button-examples>
+          <button type="button" class="trace-primary">
+            <span class="trace-icon" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 3h12v18H6zM9 7h6M9 11h6M9 15h4"></path></svg></span
+            >Review order<span
+              class="trace-icon trace-icon-directional"
+              aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+            ></span>
+          </button>
+        </div>
+        <h3>Sizes</h3>
+        <div data-button-sizes>
+          <button type="button" class="trace-primary trace-small">
+            Primary
+          </button>
+          <button type="button" class="trace-primary">Primary</button>
+          <button type="button" class="trace-primary trace-large">
+            Primary
+          </button>
+        </div>
+
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <div data-button-examples>
+            <div data-button-states>
+              <input type="button" value="زر" /><input
+                type="button"
+                value="زر"
+                disabled
+              />
+            </div>
+            <div data-button-states>
+              <input type="submit" value="إرسال" /><input
+                type="submit"
+                value="إرسال"
+                disabled
+              />
+            </div>
+            <div data-button-states>
+              <input type="reset" value="إعادة تعيين" /><input
+                type="reset"
+                value="إعادة تعيين"
+                disabled
+              />
+            </div>
+          </div>
+          <div data-button-examples>
+            <div data-button-states>
+              <button type="button">افتراضي</button
+              ><button type="button" disabled>افتراضي</button
+              ><button type="button" data-loader-demo>افتراضي</button>
+            </div>
+          </div>
+          <h3>امتدادات</h3>
+          <div data-button-examples>
+            <div data-button-states>
+              <input
+                type="button"
+                value="زر"
+                class="trace-primary trace-small"
+              /><input
+                type="button"
+                value="زر"
+                class="trace-primary trace-small"
+                disabled
+              />
+            </div>
+            <div data-button-states>
+              <input type="submit" value="إرسال" class="trace-primary" /><input
+                type="submit"
+                value="إرسال"
+                class="trace-primary"
+                disabled
+              />
+            </div>
+            <div data-button-states>
+              <input
+                type="reset"
+                value="إعادة تعيين"
+                class="trace-secondary"
+              /><input
+                type="reset"
+                value="إعادة تعيين"
+                class="trace-secondary"
+                disabled
+              />
+            </div>
+          </div>
+          <div data-button-variants>
+            <div data-button-examples>
+              <div data-button-states aria-label="أساسي ممتلئ بنص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary">أساسي</button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary" disabled>
+                    أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary" data-loader-demo>
+                    أساسي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="أساسي ممتلئ بأيقونة ونص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary">
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary" disabled>
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary" data-loader-demo>
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >أساسي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="ثانوي ممتلئ بنص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-secondary">ثانوي</button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-secondary" disabled>
+                    ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary"
+                    data-loader-demo
+                  >
+                    ثانوي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="ثانوي ممتلئ بأيقونة ونص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-secondary">
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-secondary" disabled>
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >ثانوي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="خطر ممتلئ بنص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger">خطر</button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger" disabled>
+                    خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger" data-loader-demo>
+                    خطر
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="خطر ممتلئ بأيقونة ونص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger">
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger" disabled>
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger" data-loader-demo>
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >خطر
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div data-button-examples>
+              <div data-button-states aria-label="أساسي بإطار بنص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary trace-outline">
+                    أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline"
+                    disabled
+                  >
+                    أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline"
+                    data-loader-demo
+                  >
+                    أساسي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="أساسي بإطار بأيقونة ونص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary trace-outline">
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >أساسي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="ثانوي بإطار بنص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-secondary trace-outline">
+                    ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline"
+                    disabled
+                  >
+                    ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline"
+                    data-loader-demo
+                  >
+                    ثانوي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="ثانوي بإطار بأيقونة ونص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-secondary trace-outline">
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >ثانوي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="خطر بإطار بنص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger trace-outline">
+                    خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline"
+                    disabled
+                  >
+                    خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline"
+                    data-loader-demo
+                  >
+                    خطر
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="خطر بإطار بأيقونة ونص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger trace-outline">
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >خطر
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div data-button-examples>
+              <div data-button-states aria-label="أساسي ممتلئ بأيقونة فقط">
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-icon-only"
+                    aria-label="Primary"
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-icon-only"
+                    aria-label="Primary"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-icon-only"
+                    aria-label="Primary"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="أساسي بإطار بأيقونة فقط">
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline trace-icon-only"
+                    aria-label="Primary"
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline trace-icon-only"
+                    aria-label="Primary"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline trace-icon-only"
+                    aria-label="Primary"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="ثانوي ممتلئ بأيقونة فقط">
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-icon-only"
+                    aria-label="Secondary"
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-icon-only"
+                    aria-label="Secondary"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-icon-only"
+                    aria-label="Secondary"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="ثانوي بإطار بأيقونة فقط">
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline trace-icon-only"
+                    aria-label="Secondary"
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline trace-icon-only"
+                    aria-label="Secondary"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline trace-icon-only"
+                    aria-label="Secondary"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="خطر ممتلئ بأيقونة فقط">
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-icon-only"
+                    aria-label="Danger"
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-icon-only"
+                    aria-label="Danger"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-icon-only"
+                    aria-label="Danger"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="خطر بإطار بأيقونة فقط">
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline trace-icon-only"
+                    aria-label="Danger"
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline trace-icon-only"
+                    aria-label="Danger"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline trace-icon-only"
+                    aria-label="Danger"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-button-examples>
+            <button type="button" class="trace-primary">
+              <span class="trace-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M6 3h12v18H6zM9 7h6M9 11h6M9 15h4"
+                  ></path></svg></span
+              >مراجعة الطلب<span
+                class="trace-icon trace-icon-directional"
+                aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></span>
+            </button>
+          </div>
+          <h3>الأحجام</h3>
+          <div data-button-sizes>
+            <button type="button" class="trace-primary trace-small">
+              أساسي
+            </button>
+            <button type="button" class="trace-primary">أساسي</button>
+            <button type="button" class="trace-primary trace-large">
+              أساسي
+            </button>
+          </div>
+        </section>
+      </div>
+      <div data-mode="dark" aria-label="Dark theme">
+        <h3>Classless</h3>
+        <div data-button-examples>
+          <div data-button-states>
+            <input type="button" value="Button" /><input
+              type="button"
+              value="Button"
+              disabled
+            />
+          </div>
+          <div data-button-states>
+            <input type="submit" value="Submit" /><input
+              type="submit"
+              value="Submit"
+              disabled
+            />
+          </div>
+          <div data-button-states>
+            <input type="reset" value="Reset" /><input
+              type="reset"
+              value="Reset"
+              disabled
+            />
+          </div>
+        </div>
+        <div data-button-examples>
+          <div data-button-states>
+            <button type="button">Default</button
+            ><button type="button" disabled>Default</button
+            ><button type="button" data-loader-demo>Default</button>
+          </div>
+        </div>
+        <h3>Extensions</h3>
+        <div data-button-examples>
+          <div data-button-states>
+            <input
+              type="button"
+              value="Button"
+              class="trace-primary trace-small"
+            /><input
+              type="button"
+              value="Button"
+              class="trace-primary trace-small"
+              disabled
+            />
+          </div>
+          <div data-button-states>
+            <input type="submit" value="Submit" class="trace-primary" /><input
+              type="submit"
+              value="Submit"
+              class="trace-primary"
+              disabled
+            />
+          </div>
+          <div data-button-states>
+            <input type="reset" value="Reset" class="trace-secondary" /><input
+              type="reset"
+              value="Reset"
+              class="trace-secondary"
+              disabled
+            />
+          </div>
+        </div>
+        <div data-button-variants>
+          <div data-button-examples>
+            <div data-button-states aria-label="Primary solid text">
+              <div data-button-sizes>
+                <button type="button" class="trace-primary">Primary</button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-primary" disabled>
+                  Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-primary" data-loader-demo>
+                  Primary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Primary solid icon-text">
+              <div data-button-sizes>
+                <button type="button" class="trace-primary">
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-primary" disabled>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-primary" data-loader-demo>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Primary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Secondary solid text">
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary">Secondary</button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary" disabled>
+                  Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary" data-loader-demo>
+                  Secondary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Secondary solid icon-text">
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary">
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary" disabled>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary" data-loader-demo>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Secondary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Danger solid text">
+              <div data-button-sizes>
+                <button type="button" class="trace-danger">Danger</button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-danger" disabled>
+                  Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-danger" data-loader-demo>
+                  Danger
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Danger solid icon-text">
+              <div data-button-sizes>
+                <button type="button" class="trace-danger">
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-danger" disabled>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button type="button" class="trace-danger" data-loader-demo>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Danger
+                </button>
+              </div>
+            </div>
+          </div>
+          <div data-button-examples>
+            <div data-button-states aria-label="Primary outline text">
+              <div data-button-sizes>
+                <button type="button" class="trace-primary trace-outline">
+                  Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline"
+                  disabled
+                >
+                  Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline"
+                  data-loader-demo
+                >
+                  Primary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Primary outline icon-text">
+              <div data-button-sizes>
+                <button type="button" class="trace-primary trace-outline">
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Primary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Primary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Secondary outline text">
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary trace-outline">
+                  Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline"
+                  disabled
+                >
+                  Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline"
+                  data-loader-demo
+                >
+                  Secondary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Secondary outline icon-text">
+              <div data-button-sizes>
+                <button type="button" class="trace-secondary trace-outline">
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Secondary
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Secondary
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Danger outline text">
+              <div data-button-sizes>
+                <button type="button" class="trace-danger trace-outline">
+                  Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline"
+                  disabled
+                >
+                  Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline"
+                  data-loader-demo
+                >
+                  Danger
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Danger outline icon-text">
+              <div data-button-sizes>
+                <button type="button" class="trace-danger trace-outline">
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Danger
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg></span
+                  >Danger
+                </button>
+              </div>
+            </div>
+          </div>
+          <div data-button-examples>
+            <div data-button-states aria-label="Primary solid icon-only">
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-icon-only"
+                  aria-label="Primary"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-icon-only"
+                  aria-label="Primary"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-icon-only"
+                  aria-label="Primary"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Primary outline icon-only">
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline trace-icon-only"
+                  aria-label="Primary"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline trace-icon-only"
+                  aria-label="Primary"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-primary trace-outline trace-icon-only"
+                  aria-label="Primary"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Secondary solid icon-only">
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-icon-only"
+                  aria-label="Secondary"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-icon-only"
+                  aria-label="Secondary"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-icon-only"
+                  aria-label="Secondary"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Secondary outline icon-only">
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline trace-icon-only"
+                  aria-label="Secondary"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline trace-icon-only"
+                  aria-label="Secondary"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-secondary trace-outline trace-icon-only"
+                  aria-label="Secondary"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Danger solid icon-only">
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-icon-only"
+                  aria-label="Danger"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-icon-only"
+                  aria-label="Danger"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-icon-only"
+                  aria-label="Danger"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div data-button-states aria-label="Danger outline icon-only">
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline trace-icon-only"
+                  aria-label="Danger"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline trace-icon-only"
+                  aria-label="Danger"
+                  disabled
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+              <div data-button-sizes>
+                <button
+                  type="button"
+                  class="trace-danger trace-outline trace-icon-only"
+                  aria-label="Danger"
+                  data-loader-demo
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="4" width="16" height="16" rx="2" />
+                      <path d="M8 9h8M8 14h5" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-button-examples>
+          <button type="button" class="trace-primary">
+            <span class="trace-icon" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 3h12v18H6zM9 7h6M9 11h6M9 15h4"></path></svg></span
+            >Review order<span
+              class="trace-icon trace-icon-directional"
+              aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+            ></span>
+          </button>
+        </div>
+        <h3>Sizes</h3>
+        <div data-button-sizes>
+          <button type="button" class="trace-primary trace-small">
+            Primary
+          </button>
+          <button type="button" class="trace-primary">Primary</button>
+          <button type="button" class="trace-primary trace-large">
+            Primary
+          </button>
+        </div>
+
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <div data-button-examples>
+            <div data-button-states>
+              <input type="button" value="زر" /><input
+                type="button"
+                value="زر"
+                disabled
+              />
+            </div>
+            <div data-button-states>
+              <input type="submit" value="إرسال" /><input
+                type="submit"
+                value="إرسال"
+                disabled
+              />
+            </div>
+            <div data-button-states>
+              <input type="reset" value="إعادة تعيين" /><input
+                type="reset"
+                value="إعادة تعيين"
+                disabled
+              />
+            </div>
+          </div>
+          <div data-button-examples>
+            <div data-button-states>
+              <button type="button">افتراضي</button
+              ><button type="button" disabled>افتراضي</button
+              ><button type="button" data-loader-demo>افتراضي</button>
+            </div>
+          </div>
+          <h3>امتدادات</h3>
+          <div data-button-examples>
+            <div data-button-states>
+              <input
+                type="button"
+                value="زر"
+                class="trace-primary trace-small"
+              /><input
+                type="button"
+                value="زر"
+                class="trace-primary trace-small"
+                disabled
+              />
+            </div>
+            <div data-button-states>
+              <input type="submit" value="إرسال" class="trace-primary" /><input
+                type="submit"
+                value="إرسال"
+                class="trace-primary"
+                disabled
+              />
+            </div>
+            <div data-button-states>
+              <input
+                type="reset"
+                value="إعادة تعيين"
+                class="trace-secondary"
+              /><input
+                type="reset"
+                value="إعادة تعيين"
+                class="trace-secondary"
+                disabled
+              />
+            </div>
+          </div>
+          <div data-button-variants>
+            <div data-button-examples>
+              <div data-button-states aria-label="أساسي ممتلئ بنص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary">أساسي</button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary" disabled>
+                    أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary" data-loader-demo>
+                    أساسي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="أساسي ممتلئ بأيقونة ونص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary">
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary" disabled>
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary" data-loader-demo>
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >أساسي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="ثانوي ممتلئ بنص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-secondary">ثانوي</button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-secondary" disabled>
+                    ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary"
+                    data-loader-demo
+                  >
+                    ثانوي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="ثانوي ممتلئ بأيقونة ونص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-secondary">
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-secondary" disabled>
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >ثانوي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="خطر ممتلئ بنص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger">خطر</button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger" disabled>
+                    خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger" data-loader-demo>
+                    خطر
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="خطر ممتلئ بأيقونة ونص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger">
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger" disabled>
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger" data-loader-demo>
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >خطر
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div data-button-examples>
+              <div data-button-states aria-label="أساسي بإطار بنص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary trace-outline">
+                    أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline"
+                    disabled
+                  >
+                    أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline"
+                    data-loader-demo
+                  >
+                    أساسي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="أساسي بإطار بأيقونة ونص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-primary trace-outline">
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >أساسي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >أساسي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="ثانوي بإطار بنص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-secondary trace-outline">
+                    ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline"
+                    disabled
+                  >
+                    ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline"
+                    data-loader-demo
+                  >
+                    ثانوي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="ثانوي بإطار بأيقونة ونص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-secondary trace-outline">
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >ثانوي
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >ثانوي
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="خطر بإطار بنص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger trace-outline">
+                    خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline"
+                    disabled
+                  >
+                    خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline"
+                    data-loader-demo
+                  >
+                    خطر
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="خطر بإطار بأيقونة ونص">
+                <div data-button-sizes>
+                  <button type="button" class="trace-danger trace-outline">
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >خطر
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg></span
+                    >خطر
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div data-button-examples>
+              <div data-button-states aria-label="أساسي ممتلئ بأيقونة فقط">
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-icon-only"
+                    aria-label="Primary"
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-icon-only"
+                    aria-label="Primary"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-icon-only"
+                    aria-label="Primary"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="أساسي بإطار بأيقونة فقط">
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline trace-icon-only"
+                    aria-label="Primary"
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline trace-icon-only"
+                    aria-label="Primary"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-primary trace-outline trace-icon-only"
+                    aria-label="Primary"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="ثانوي ممتلئ بأيقونة فقط">
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-icon-only"
+                    aria-label="Secondary"
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-icon-only"
+                    aria-label="Secondary"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-icon-only"
+                    aria-label="Secondary"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="ثانوي بإطار بأيقونة فقط">
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline trace-icon-only"
+                    aria-label="Secondary"
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline trace-icon-only"
+                    aria-label="Secondary"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-secondary trace-outline trace-icon-only"
+                    aria-label="Secondary"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="خطر ممتلئ بأيقونة فقط">
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-icon-only"
+                    aria-label="Danger"
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-icon-only"
+                    aria-label="Danger"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-icon-only"
+                    aria-label="Danger"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+              <div data-button-states aria-label="خطر بإطار بأيقونة فقط">
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline trace-icon-only"
+                    aria-label="Danger"
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline trace-icon-only"
+                    aria-label="Danger"
+                    disabled
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+                <div data-button-sizes>
+                  <button
+                    type="button"
+                    class="trace-danger trace-outline trace-icon-only"
+                    aria-label="Danger"
+                    data-loader-demo
+                  >
+                    <span class="trace-icon" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M8 9h8M8 14h5" /></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-button-examples>
+            <button type="button" class="trace-primary">
+              <span class="trace-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M6 3h12v18H6zM9 7h6M9 11h6M9 15h4"
+                  ></path></svg></span
+              >مراجعة الطلب<span
+                class="trace-icon trace-icon-directional"
+                aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></span>
+            </button>
+          </div>
+          <h3>الأحجام</h3>
+          <div data-button-sizes>
+            <button type="button" class="trace-primary trace-small">
+              أساسي
+            </button>
+            <button type="button" class="trace-primary">أساسي</button>
+            <button type="button" class="trace-primary trace-large">
+              أساسي
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

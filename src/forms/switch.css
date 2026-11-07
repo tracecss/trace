@@ -1,0 +1,156 @@
+@layer trace.elements {
+  :where(:root) {
+    --trace-switch-width: 2.125rem;
+    --trace-switch-height: 1.25rem;
+    --trace-switch-dot-size: 0.75rem;
+    --trace-switch-dot-active-size: 0.875rem;
+    --trace-switch-padding: 0.125rem;
+    --trace-switch-color: light-dark(
+      var(--trace-primary),
+      var(--trace-secondary)
+    );
+    --trace-switch-radius: var(--trace-radius-sm);
+  }
+
+  :where(input[type="checkbox"][role="switch"]) {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    inline-size: var(--trace-switch-width);
+    block-size: var(--trace-switch-height);
+    margin: 2px;
+    padding: var(--trace-switch-padding);
+    border: 2px solid var(--trace-switch-color);
+    border-radius: var(--trace-switch-radius);
+    background-color: var(--trace-switch-bg, var(--trace-control-bg));
+    background-image: radial-gradient(
+      ellipse at center,
+      var(--trace-switch-color) 50%,
+      transparent 50%
+    );
+    background-repeat: no-repeat;
+    background-size: 200% 300%;
+    background-position: right -100% top 50%;
+    vertical-align: middle;
+    overflow: hidden;
+    cursor: pointer;
+    transition:
+      transform 250ms ease-in-out,
+      background-position 250ms ease-in-out;
+  }
+
+  :where(input[type="checkbox"][role="switch"])::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: var(--trace-switch-padding);
+    inset-block-start: var(--trace-switch-padding);
+    inline-size: var(--trace-switch-dot-size);
+    block-size: var(--trace-switch-dot-size);
+    border-radius: 2px;
+    background-color: var(--trace-switch-color);
+    transition:
+      inset-inline-start 200ms ease-in-out,
+      inline-size 200ms ease-in-out,
+      background-color 200ms ease-in-out;
+  }
+
+  :where(input[type="checkbox"][role="switch"]:checked) {
+    background-position: right 40% top 50%;
+  }
+
+  :where(input[type="checkbox"][role="switch"]:checked)::before {
+    inset-inline-start: calc(
+      100% - var(--trace-switch-dot-size) - var(--trace-switch-padding)
+    );
+    background-color: var(
+      --trace-switch-dot-checked,
+      var(--trace-switch-bg, var(--trace-control-bg))
+    );
+  }
+
+  :where(input[type="checkbox"][role="switch"]:dir(rtl)) {
+    background-position: left -100% top 50%;
+  }
+
+  :where(input[type="checkbox"][role="switch"]:dir(rtl):checked) {
+    background-position: left 40% top 50%;
+  }
+
+  :where(input[type="checkbox"][role="switch"]:focus-visible) {
+    outline: 2px solid var(--trace-switch-color);
+    outline-offset: 2px;
+  }
+
+  :where(label:has(> input[type="checkbox"][role="switch"])) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+
+  :where(
+    input[type="checkbox"][role="switch"]:active:not(:disabled),
+    label:active > input[type="checkbox"][role="switch"]:not(:disabled)
+  ) {
+    transform: scale(0.9);
+  }
+
+  :where(
+    input[type="checkbox"][role="switch"]:active:not(:disabled),
+    label:active > input[type="checkbox"][role="switch"]:not(:disabled)
+  )::before {
+    inline-size: var(--trace-switch-dot-active-size);
+  }
+
+  :where(
+    input[type="checkbox"][role="switch"]:active:checked:not(:disabled),
+    label:active > input[type="checkbox"][role="switch"]:checked:not(:disabled)
+  )::before {
+    inset-inline-start: calc(
+      100% - var(--trace-switch-dot-active-size) - var(--trace-switch-padding)
+    );
+  }
+
+  :where(input[type="checkbox"][role="switch"]:disabled) {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  :where(label:has(> input[type="checkbox"][role="switch"]:disabled)) {
+    cursor: not-allowed;
+  }
+
+  :where(label > input[type="checkbox"][role="switch"]:disabled ~ span) {
+    opacity: 0.5;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :where(input[type="checkbox"][role="switch"]) {
+      transition: none;
+      transform: none;
+    }
+
+    :where(input[type="checkbox"][role="switch"])::before {
+      transition: none;
+      transform: none;
+    }
+  }
+
+  @media (forced-colors: active) {
+    :where(input[type="checkbox"][role="switch"]) {
+      appearance: auto;
+      -webkit-appearance: auto;
+      background: none;
+    }
+
+    :where(input[type="checkbox"][role="switch"])::before {
+      content: none;
+    }
+  }
+  :where(input[type="checkbox"][role="switch"][aria-invalid="true"]) {
+    --trace-switch-color: var(--trace-danger);
+  }
+}

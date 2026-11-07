@@ -1,0 +1,15 @@
+@layer trace.extensions {
+  :where(textarea.trace-small) {
+    --trace-textarea-font-size: 0.875rem;
+    --trace-textarea-line-height: 1.25rem;
+    --trace-textarea-padding-block: 0.25rem;
+    --trace-textarea-padding-inline: 0.5rem;
+  }
+
+  :where(textarea.trace-large) {
+    --trace-textarea-font-size: 1.125rem;
+    --trace-textarea-line-height: 1.75rem;
+    --trace-textarea-padding-block: 0.5rem;
+    --trace-textarea-padding-inline: 0.75rem;
+  }
+}

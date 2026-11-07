@@ -1,0 +1,16 @@
+@layer trace.foundation, trace.elements, trace.extensions;
+
+@import "./foundation.css";
+@import "./content/typography.css";
+@import "./content/link.css";
+@import "./content/table.css";
+@import "./elements/loader.css";
+@import "./elements/button.css";
+@import "./forms/switch.css";
+@import "./forms/radio.css";
+@import "./forms/input.css";
+@import "./forms/file.css";
+@import "./forms/textarea.css";
+@import "./forms/checkbox.css";
+@import "./forms/select.css";
+@import "./forms/range.css";

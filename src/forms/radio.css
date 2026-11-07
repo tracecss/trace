@@ -1,0 +1,112 @@
+@layer trace.elements {
+  :where(:root) {
+    --trace-radio-size: 1.25rem;
+    --trace-radio-color: light-dark(
+      var(--trace-primary),
+      var(--trace-secondary)
+    );
+  }
+
+  :where(input[type="radio"]) {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    inline-size: var(--trace-radio-size);
+    block-size: var(--trace-radio-size);
+    margin: 2px;
+    padding: 0;
+    border: 2px solid var(--trace-radio-color);
+    border-radius: 50%;
+    background: var(--trace-radio-bg, var(--trace-control-bg));
+    vertical-align: middle;
+    cursor: pointer;
+    transition:
+      transform 250ms ease-in-out,
+      border-color 250ms ease-in-out;
+  }
+
+  :where(input[type="radio"])::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    box-sizing: border-box;
+    border: 2px solid var(--trace-radio-color);
+    border-radius: 50%;
+    background-color: transparent;
+    transition:
+      border-color 250ms ease-in-out,
+      background-color 250ms ease-in-out,
+      transform 250ms ease-in-out;
+  }
+
+  :where(input[type="radio"]:checked)::before {
+    background-color: var(--trace-radio-color);
+    transform: scale(0.6);
+  }
+
+  :where(input[type="radio"]:focus-visible) {
+    outline: 2px solid var(--trace-radio-color);
+    outline-offset: 2px;
+  }
+
+  :where(label:has(> input[type="radio"])) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+
+  :where(
+    input[type="radio"]:active:not(:disabled),
+    label:active > input[type="radio"]:not(:disabled)
+  ) {
+    transform: scale(0.9);
+  }
+
+  :where(input[type="radio"]:disabled) {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  :where(label:has(> input[type="radio"]:disabled)) {
+    cursor: not-allowed;
+  }
+
+  :where(label > input[type="radio"]:disabled ~ span) {
+    opacity: 0.5;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :where(input[type="radio"]) {
+      transition: none;
+      transform: none;
+    }
+
+    :where(input[type="radio"])::before {
+      transition: none;
+      transform: none;
+    }
+
+    :where(input[type="radio"]:checked)::before {
+      transform: scale(0.6);
+    }
+  }
+
+  @media (forced-colors: active) {
+    :where(input[type="radio"]) {
+      appearance: auto;
+      -webkit-appearance: auto;
+    }
+
+    :where(input[type="radio"])::before {
+      content: none;
+    }
+  }
+
+  :where(input[type="radio"][aria-invalid="true"]) {
+    --trace-radio-color: var(--trace-danger);
+  }
+}

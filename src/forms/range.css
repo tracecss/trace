@@ -1,0 +1,170 @@
+@layer trace.elements {
+  :where(:root) {
+    --trace-range-color: light-dark(
+      var(--trace-primary),
+      var(--trace-secondary)
+    );
+    --trace-range-track-color: light-dark(
+      var(--trace-primary-light),
+      var(--trace-secondary-dark)
+    );
+    --trace-range-error: var(--trace-danger);
+    --trace-range-track-size: 0.375rem;
+    --trace-range-thumb-size: 1.25rem;
+    --trace-range-height: 2rem;
+    --trace-range-active-scale: 1.15;
+    --trace-range-duration: 150ms;
+  }
+
+  :where(input[type="range"]) {
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    box-sizing: border-box;
+    inline-size: 100%;
+    min-inline-size: 0;
+    block-size: var(--trace-range-height);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--trace-range-color);
+    accent-color: var(--trace-range-color);
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid var(--trace-range-color);
+      outline-offset: 2px;
+      border-radius: var(--trace-radius-control);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &[aria-invalid="true"] {
+      --trace-range-color: var(--trace-range-error);
+      --trace-range-track-color: color-mix(
+        in srgb,
+        var(--trace-range-error),
+        transparent 70%
+      );
+    }
+  }
+
+  :where(input[type="range"])::-webkit-slider-runnable-track {
+    box-sizing: border-box;
+    block-size: var(--trace-range-track-size);
+    border: 0;
+    border-radius: 999px;
+    background: var(--trace-range-track-color);
+  }
+
+  :where(input[type="range"])::-moz-range-track {
+    box-sizing: border-box;
+    block-size: var(--trace-range-track-size);
+    border: 0;
+    border-radius: 999px;
+    background: var(--trace-range-track-color);
+  }
+
+  :where(input[type="range"])::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    inline-size: var(--trace-range-thumb-size);
+    block-size: var(--trace-range-thumb-size);
+    margin-block-start: calc(
+      (var(--trace-range-track-size) - var(--trace-range-thumb-size)) / 2
+    );
+    border: 2px solid var(--trace-range-color);
+    border-radius: 50%;
+    background: var(--trace-range-color);
+    transition:
+      transform var(--trace-range-duration) ease-out,
+      box-shadow 200ms ease-in-out;
+  }
+
+  :where(input[type="range"])::-moz-range-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    inline-size: var(--trace-range-thumb-size);
+    block-size: var(--trace-range-thumb-size);
+    border: 2px solid var(--trace-range-color);
+    border-radius: 50%;
+    background: var(--trace-range-color);
+    transition:
+      transform var(--trace-range-duration) ease-out,
+      box-shadow 200ms ease-in-out;
+  }
+
+  :where(input[type="range"]:focus:not(:disabled))::-webkit-slider-thumb {
+    box-shadow: 0 0 0 4px
+      color-mix(in srgb, var(--trace-range-color), transparent 70%);
+  }
+
+  :where(input[type="range"]:focus:not(:disabled))::-moz-range-thumb {
+    box-shadow: 0 0 0 4px
+      color-mix(in srgb, var(--trace-range-color), transparent 70%);
+  }
+
+  :where(input[type="range"]:active:not(:disabled))::-webkit-slider-thumb {
+    transform: scale(var(--trace-range-active-scale));
+  }
+
+  :where(input[type="range"]:active:not(:disabled))::-moz-range-thumb {
+    transform: scale(var(--trace-range-active-scale));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :where(input[type="range"])::-webkit-slider-thumb {
+      transition: none;
+      transform: none;
+    }
+
+    :where(input[type="range"]:active:not(:disabled))::-webkit-slider-thumb {
+      transition: none;
+      transform: none;
+    }
+    :where(input[type="range"])::-moz-range-thumb {
+      transition: none;
+      transform: none;
+    }
+
+    :where(input[type="range"]:active:not(:disabled))::-moz-range-thumb {
+      transition: none;
+      transform: none;
+    }
+  }
+
+  :where(label:has(> input[type="range"])) {
+    display: grid;
+    gap: 0.25rem;
+    min-inline-size: 0;
+    color: var(--trace-text);
+    cursor: pointer;
+
+    & > small {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    &:has(> input[aria-invalid="true"]) > small:last-child {
+      color: var(--trace-range-error);
+    }
+
+    &:has(> input:disabled) {
+      cursor: not-allowed;
+      color: color-mix(in srgb, var(--trace-text), transparent 50%);
+    }
+  }
+
+  @media (forced-colors: active) {
+    :where(input[type="range"]) {
+      --trace-range-color: ButtonText;
+      --trace-range-track-color: GrayText;
+    }
+  }
+}

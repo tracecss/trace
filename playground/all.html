@@ -1,0 +1,1616 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>All components</title>
+    <script src="./playground.js"></script>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a
+      ><a href="./all.html" aria-current="page">All components</a>
+    </header>
+    <main data-overview>
+      <h1>All components</h1>
+      <p>A compact overview in light and dark themes.</p>
+      <nav aria-label="Sections">
+        <ul>
+          <li><a href="#classless">Classless</a></li>
+          <li><a href="#extended">Extended</a></li>
+          <li><a href="#rtl">RTL</a></li>
+        </ul>
+      </nav>
+      <section id="classless">
+        <h2>Classless</h2>
+        <div data-theme-preview>
+          <div data-mode="light" aria-label="Classless, light theme">
+            <h3>Light theme</h3>
+
+            <section data-overview-component data-component="typography">
+              <h4>Typography</h4>
+              <p>
+                Body text with <strong>strong text</strong>,
+                <em>emphasis</em> and <mark>highlighting</mark>.
+              </p>
+              <p><code>--trace-font-body</code> <kbd>Tab</kbd></p>
+            </section>
+            <section data-overview-component data-component="link">
+              <h4>Links</h4>
+              <p><a href="./index.html">Browse components</a></p>
+            </section>
+            <section data-overview-component data-component="button">
+              <h4>Buttons</h4>
+              <div data-button-examples>
+                <button type="button">Save</button>
+              </div>
+            </section>
+            <section data-overview-component data-component="table">
+              <h4>Tables</h4>
+              <div data-table-example>
+                <table>
+                  <caption>
+                    Component inventory
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Component</th>
+                      <th scope="col">Count</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Input</th>
+                      <td>12</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Select</th>
+                      <td>8</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section data-overview-component data-component="input">
+              <h4>Inputs</h4>
+              <div data-form-examples>
+                <label>Name<input placeholder="For example, Anna" /></label
+                ><label>Date<input type="date" /></label
+                ><label
+                  >Invalid<input
+                    aria-invalid="true"
+                    aria-describedby="overview-classless-light-input-error"
+                  /><small id="overview-classless-light-input-error"
+                    >Check the entered value.</small
+                  ></label
+                >
+              </div>
+            </section>
+            <section data-overview-component data-component="file">
+              <h4>File upload</h4>
+              <div data-form-examples>
+                <label>Single file<input type="file" /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="textarea">
+              <h4>Textarea</h4>
+              <div data-form-examples>
+                <label
+                  >Message<textarea
+                    rows="2"
+                    placeholder="Write a message"
+                  ></textarea>
+                </label>
+              </div>
+            </section>
+            <section data-overview-component data-component="range">
+              <h4>Range</h4>
+              <div data-form-examples>
+                <label
+                  >Volume<input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="40" /></label
+                ><label
+                  >Invalid<input
+                    type="range"
+                    value="90"
+                    aria-invalid="true"
+                    aria-describedby="overview-classless-light-range-error"
+                  /><small id="overview-classless-light-range-error"
+                    >Choose a value no greater than 80.</small
+                  ></label
+                >
+              </div>
+            </section>
+            <section data-overview-component data-component="select">
+              <h4>Select</h4>
+              <div data-form-examples>
+                <label
+                  >City<select>
+                    <option>Choose an option</option>
+                    <option>First option</option>
+                    <option>Second option</option>
+                  </select></label
+                >
+              </div>
+            </section>
+            <section data-overview-component data-component="switch">
+              <h4>Switch</h4>
+              <div data-form-examples data-overview-inline>
+                <label>Off<input type="checkbox" role="switch" /></label
+                ><label
+                  >On<input type="checkbox" role="switch" checked
+                /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="checkbox">
+              <h4>Checkbox</h4>
+              <div data-form-examples data-overview-inline>
+                <label>Checked<input type="checkbox" checked /></label
+                ><label
+                  >Indeterminate<input
+                    type="checkbox"
+                    data-indeterminate /></label
+                ><label>Disabled<input type="checkbox" disabled /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="radio">
+              <h4>Radio</h4>
+              <div
+                data-form-examples
+                data-overview-inline
+                role="group"
+                aria-label="Options"
+              >
+                <label
+                  >Monthly<input
+                    type="radio"
+                    name="overview-classless-light-billing"
+                    value="monthly"
+                    checked /></label
+                ><label
+                  >Yearly<input
+                    type="radio"
+                    name="overview-classless-light-billing"
+                    value="yearly"
+                /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="loader">
+              <h4>Loader</h4>
+              <div data-form-examples>
+                <div
+                  id="overview-classless-light-busy"
+                  data-loader-panel
+                  aria-busy="true"
+                >
+                  <p>The content remains in place while loading.</p>
+                </div>
+                <button
+                  type="button"
+                  data-busy-toggle
+                  aria-controls="overview-classless-light-busy"
+                  aria-pressed="true"
+                >
+                  Toggle loading
+                </button>
+              </div>
+            </section>
+          </div>
+          <div data-mode="dark" aria-label="Classless, dark theme">
+            <h3>Dark theme</h3>
+
+            <section data-overview-component data-component="typography">
+              <h4>Typography</h4>
+              <p>
+                Body text with <strong>strong text</strong>,
+                <em>emphasis</em> and <mark>highlighting</mark>.
+              </p>
+              <p><code>--trace-font-body</code> <kbd>Tab</kbd></p>
+            </section>
+            <section data-overview-component data-component="link">
+              <h4>Links</h4>
+              <p><a href="./index.html">Browse components</a></p>
+            </section>
+            <section data-overview-component data-component="button">
+              <h4>Buttons</h4>
+              <div data-button-examples>
+                <button type="button">Save</button>
+              </div>
+            </section>
+            <section data-overview-component data-component="table">
+              <h4>Tables</h4>
+              <div data-table-example>
+                <table>
+                  <caption>
+                    Component inventory
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Component</th>
+                      <th scope="col">Count</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Input</th>
+                      <td>12</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Select</th>
+                      <td>8</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section data-overview-component data-component="input">
+              <h4>Inputs</h4>
+              <div data-form-examples>
+                <label>Name<input placeholder="For example, Anna" /></label
+                ><label>Date<input type="date" /></label
+                ><label
+                  >Invalid<input
+                    aria-invalid="true"
+                    aria-describedby="overview-classless-dark-input-error"
+                  /><small id="overview-classless-dark-input-error"
+                    >Check the entered value.</small
+                  ></label
+                >
+              </div>
+            </section>
+            <section data-overview-component data-component="file">
+              <h4>File upload</h4>
+              <div data-form-examples>
+                <label>Single file<input type="file" /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="textarea">
+              <h4>Textarea</h4>
+              <div data-form-examples>
+                <label
+                  >Message<textarea
+                    rows="2"
+                    placeholder="Write a message"
+                  ></textarea>
+                </label>
+              </div>
+            </section>
+            <section data-overview-component data-component="range">
+              <h4>Range</h4>
+              <div data-form-examples>
+                <label
+                  >Volume<input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="40" /></label
+                ><label
+                  >Invalid<input
+                    type="range"
+                    value="90"
+                    aria-invalid="true"
+                    aria-describedby="overview-classless-dark-range-error"
+                  /><small id="overview-classless-dark-range-error"
+                    >Choose a value no greater than 80.</small
+                  ></label
+                >
+              </div>
+            </section>
+            <section data-overview-component data-component="select">
+              <h4>Select</h4>
+              <div data-form-examples>
+                <label
+                  >City<select>
+                    <option>Choose an option</option>
+                    <option>First option</option>
+                    <option>Second option</option>
+                  </select></label
+                >
+              </div>
+            </section>
+            <section data-overview-component data-component="switch">
+              <h4>Switch</h4>
+              <div data-form-examples data-overview-inline>
+                <label>Off<input type="checkbox" role="switch" /></label
+                ><label
+                  >On<input type="checkbox" role="switch" checked
+                /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="checkbox">
+              <h4>Checkbox</h4>
+              <div data-form-examples data-overview-inline>
+                <label>Checked<input type="checkbox" checked /></label
+                ><label
+                  >Indeterminate<input
+                    type="checkbox"
+                    data-indeterminate /></label
+                ><label>Disabled<input type="checkbox" disabled /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="radio">
+              <h4>Radio</h4>
+              <div
+                data-form-examples
+                data-overview-inline
+                role="group"
+                aria-label="Options"
+              >
+                <label
+                  >Monthly<input
+                    type="radio"
+                    name="overview-classless-dark-billing"
+                    value="monthly"
+                    checked /></label
+                ><label
+                  >Yearly<input
+                    type="radio"
+                    name="overview-classless-dark-billing"
+                    value="yearly"
+                /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="loader">
+              <h4>Loader</h4>
+              <div data-form-examples>
+                <div
+                  id="overview-classless-dark-busy"
+                  data-loader-panel
+                  aria-busy="true"
+                >
+                  <p>The content remains in place while loading.</p>
+                </div>
+                <button
+                  type="button"
+                  data-busy-toggle
+                  aria-controls="overview-classless-dark-busy"
+                  aria-pressed="true"
+                >
+                  Toggle loading
+                </button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section id="extended">
+        <h2>Extended</h2>
+        <div data-theme-preview>
+          <div data-mode="light" aria-label="Extended, light theme">
+            <h3>Light theme</h3>
+            <section data-overview-component data-component="button">
+              <h4>Buttons</h4>
+              <div data-button-examples>
+                <button type="button" class="trace-primary" data-loader-demo>
+                  Primary</button
+                ><button type="button" class="trace-secondary" data-loader-demo>
+                  Secondary</button
+                ><button type="button" class="trace-outline" data-loader-demo>
+                  Outline</button
+                ><button type="button" class="trace-danger" data-loader-demo>
+                  Danger
+                </button>
+              </div>
+            </section>
+            <section data-overview-component data-component="table">
+              <h4>Tables</h4>
+              <div
+                class="trace-table-wrap"
+                tabindex="0"
+                role="region"
+                aria-label="Component inventory"
+              >
+                <table class="trace-striped trace-hover trace-compact">
+                  <caption>
+                    Component inventory
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Component</th>
+                      <th scope="col">Count</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Input</th>
+                      <td class="trace-numeric">12</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Select</th>
+                      <td class="trace-numeric">8</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section data-overview-component data-component="input">
+              <h4>Inputs</h4>
+              <div data-form-examples>
+                <label
+                  >Search with icon<span class="trace-input-wrap"
+                    ><span
+                      class="trace-icon trace-input-icon-start"
+                      aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="10" cy="10" r="6" />
+                        <path d="m15 15 5 5" /></svg></span
+                    ><input type="search" placeholder="Search" /></span
+                ></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="file">
+              <h4>File upload</h4>
+              <div data-form-examples>
+                <label>Small<input type="file" class="trace-small" /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="textarea">
+              <h4>Textarea</h4>
+              <div data-form-examples>
+                <label
+                  >Large<textarea
+                    rows="2"
+                    placeholder="Write a message"
+                    class="trace-large"
+                  ></textarea>
+                </label>
+              </div>
+            </section>
+            <section data-overview-component data-component="range">
+              <h4>Range</h4>
+              <div data-form-examples>
+                <label
+                  >Small<input type="range" class="trace-small" value="25"
+                /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="select">
+              <h4>Select</h4>
+              <div data-form-examples>
+                <label
+                  >Custom arrow<span class="trace-select"
+                    ><select>
+                      <option>Choose an option</option>
+                      <option>First option</option>
+                      <option>Second option</option>
+                    </select></span
+                  ></label
+                >
+              </div>
+            </section>
+            <section data-overview-component data-component="switch">
+              <h4>Switch</h4>
+              <div data-form-examples data-overview-inline>
+                <label
+                  >With icon<span class="trace-switch"
+                    ><input type="checkbox" role="switch" /><span
+                      class="trace-icon"
+                      aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="10" cy="10" r="6" />
+                        <path d="m15 15 5 5" /></svg></span></span
+                ></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="checkbox">
+              <h4>Checkbox</h4>
+              <div data-form-examples data-overview-inline>
+                <label
+                  >Small<input
+                    type="checkbox"
+                    class="trace-small"
+                    name="overview-extended-light-checkbox"
+                    value="small" /></label
+                ><label
+                  >Large<input
+                    type="checkbox"
+                    class="trace-large"
+                    name="overview-extended-light-checkbox"
+                    value="large"
+                /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="radio">
+              <h4>Radio</h4>
+              <div
+                data-form-examples
+                data-overview-inline
+                role="group"
+                aria-label="Options"
+              >
+                <label
+                  >Small<input
+                    type="radio"
+                    class="trace-small"
+                    name="overview-extended-light-radio"
+                    value="small" /></label
+                ><label
+                  >Large<input
+                    type="radio"
+                    class="trace-large"
+                    name="overview-extended-light-radio"
+                    value="large"
+                /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="icon">
+              <h4>Icons</h4>
+              <p>
+                <span class="trace-icon" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="10" cy="10" r="6" />
+                    <path d="m15 15 5 5" /></svg
+                ></span>
+                Search
+              </p>
+              <p>
+                <span
+                  class="trace-icon"
+                  style="--trace-icon-size: 2rem"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="10" cy="10" r="6" />
+                    <path d="m15 15 5 5" /></svg
+                ></span>
+                Custom size: 2rem
+              </p>
+            </section>
+            <section data-overview-component data-component="loader">
+              <h4>Loader</h4>
+              <span
+                class="trace-loader"
+                role="status"
+                aria-label="Loading"
+              ></span>
+            </section>
+          </div>
+          <div data-mode="dark" aria-label="Extended, dark theme">
+            <h3>Dark theme</h3>
+            <section data-overview-component data-component="button">
+              <h4>Buttons</h4>
+              <div data-button-examples>
+                <button type="button" class="trace-primary" data-loader-demo>
+                  Primary</button
+                ><button type="button" class="trace-secondary" data-loader-demo>
+                  Secondary</button
+                ><button type="button" class="trace-outline" data-loader-demo>
+                  Outline</button
+                ><button type="button" class="trace-danger" data-loader-demo>
+                  Danger
+                </button>
+              </div>
+            </section>
+            <section data-overview-component data-component="table">
+              <h4>Tables</h4>
+              <div
+                class="trace-table-wrap"
+                tabindex="0"
+                role="region"
+                aria-label="Component inventory"
+              >
+                <table class="trace-striped trace-hover trace-compact">
+                  <caption>
+                    Component inventory
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Component</th>
+                      <th scope="col">Count</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Input</th>
+                      <td class="trace-numeric">12</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Select</th>
+                      <td class="trace-numeric">8</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section data-overview-component data-component="input">
+              <h4>Inputs</h4>
+              <div data-form-examples>
+                <label
+                  >Search with icon<span class="trace-input-wrap"
+                    ><span
+                      class="trace-icon trace-input-icon-start"
+                      aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="10" cy="10" r="6" />
+                        <path d="m15 15 5 5" /></svg></span
+                    ><input type="search" placeholder="Search" /></span
+                ></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="file">
+              <h4>File upload</h4>
+              <div data-form-examples>
+                <label>Small<input type="file" class="trace-small" /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="textarea">
+              <h4>Textarea</h4>
+              <div data-form-examples>
+                <label
+                  >Large<textarea
+                    rows="2"
+                    placeholder="Write a message"
+                    class="trace-large"
+                  ></textarea>
+                </label>
+              </div>
+            </section>
+            <section data-overview-component data-component="range">
+              <h4>Range</h4>
+              <div data-form-examples>
+                <label
+                  >Small<input type="range" class="trace-small" value="25"
+                /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="select">
+              <h4>Select</h4>
+              <div data-form-examples>
+                <label
+                  >Custom arrow<span class="trace-select"
+                    ><select>
+                      <option>Choose an option</option>
+                      <option>First option</option>
+                      <option>Second option</option>
+                    </select></span
+                  ></label
+                >
+              </div>
+            </section>
+            <section data-overview-component data-component="switch">
+              <h4>Switch</h4>
+              <div data-form-examples data-overview-inline>
+                <label
+                  >With icon<span class="trace-switch"
+                    ><input type="checkbox" role="switch" /><span
+                      class="trace-icon"
+                      aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="10" cy="10" r="6" />
+                        <path d="m15 15 5 5" /></svg></span></span
+                ></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="checkbox">
+              <h4>Checkbox</h4>
+              <div data-form-examples data-overview-inline>
+                <label
+                  >Small<input
+                    type="checkbox"
+                    class="trace-small"
+                    name="overview-extended-dark-checkbox"
+                    value="small" /></label
+                ><label
+                  >Large<input
+                    type="checkbox"
+                    class="trace-large"
+                    name="overview-extended-dark-checkbox"
+                    value="large"
+                /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="radio">
+              <h4>Radio</h4>
+              <div
+                data-form-examples
+                data-overview-inline
+                role="group"
+                aria-label="Options"
+              >
+                <label
+                  >Small<input
+                    type="radio"
+                    class="trace-small"
+                    name="overview-extended-dark-radio"
+                    value="small" /></label
+                ><label
+                  >Large<input
+                    type="radio"
+                    class="trace-large"
+                    name="overview-extended-dark-radio"
+                    value="large"
+                /></label>
+              </div>
+            </section>
+            <section data-overview-component data-component="icon">
+              <h4>Icons</h4>
+              <p>
+                <span class="trace-icon" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="10" cy="10" r="6" />
+                    <path d="m15 15 5 5" /></svg
+                ></span>
+                Search
+              </p>
+              <p>
+                <span
+                  class="trace-icon"
+                  style="--trace-icon-size: 2rem"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="10" cy="10" r="6" />
+                    <path d="m15 15 5 5" /></svg
+                ></span>
+                Custom size: 2rem
+              </p>
+            </section>
+            <section data-overview-component data-component="loader">
+              <h4>Loader</h4>
+              <span
+                class="trace-loader"
+                role="status"
+                aria-label="Loading"
+              ></span>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section id="rtl">
+        <h2>RTL</h2>
+        <div data-theme-preview>
+          <div data-mode="light" aria-label="RTL, light theme">
+            <h3>Light theme</h3>
+            <div lang="ar" dir="rtl">
+              <h3 lang="en">Classless</h3>
+              <section data-overview-component data-component="typography">
+                <h4>الطباعة</h4>
+                <p>
+                  نص يحتوي على <strong>كلمات بارزة</strong> و<em>تأكيد</em>
+                  و<mark>تمييز</mark>.
+                </p>
+                <p><code>--trace-font-body</code> <kbd>Tab</kbd></p>
+              </section>
+              <section data-overview-component data-component="link">
+                <h4>الروابط</h4>
+                <p><a href="./index.html">تصفح المكونات</a></p>
+              </section>
+              <section data-overview-component data-component="button">
+                <h4>الأزرار</h4>
+                <div data-button-examples>
+                  <button type="button">حفظ</button>
+                </div>
+              </section>
+              <section data-overview-component data-component="table">
+                <h4>الجداول</h4>
+                <div data-table-example>
+                  <table>
+                    <caption>
+                      قائمة المكونات
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">المكون</th>
+                        <th scope="col">العدد</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">حقل الإدخال</th>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">قائمة الاختيار</th>
+                        <td>8</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+              <section data-overview-component data-component="input">
+                <h4>حقول الإدخال</h4>
+                <div data-form-examples>
+                  <label>الاسم<input placeholder="مثلاً، سارة" /></label
+                  ><label>التاريخ<input type="date" /></label
+                  ><label
+                    >غير صالح<input
+                      aria-invalid="true"
+                      aria-describedby="overview-rtl-light-classless-input-error"
+                    /><small id="overview-rtl-light-classless-input-error"
+                      >تحقق من القيمة المدخلة.</small
+                    ></label
+                  >
+                </div>
+              </section>
+              <section data-overview-component data-component="file">
+                <h4>رفع الملفات</h4>
+                <div data-form-examples>
+                  <label>ملف واحد<input type="file" /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="textarea">
+                <h4>منطقة النص</h4>
+                <div data-form-examples>
+                  <label
+                    >الرسالة<textarea
+                      rows="2"
+                      placeholder="اكتب رسالة"
+                    ></textarea>
+                  </label>
+                </div>
+              </section>
+              <section data-overview-component data-component="range">
+                <h4>شريط التمرير</h4>
+                <div data-form-examples>
+                  <label
+                    >مستوى الصوت<input
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="40" /></label
+                  ><label
+                    >غير صالح<input
+                      type="range"
+                      value="90"
+                      aria-invalid="true"
+                      aria-describedby="overview-rtl-light-classless-range-error"
+                    /><small id="overview-rtl-light-classless-range-error"
+                      >اختر قيمة لا تزيد عن 80.</small
+                    ></label
+                  >
+                </div>
+              </section>
+              <section data-overview-component data-component="select">
+                <h4>قائمة الاختيار</h4>
+                <div data-form-examples>
+                  <label
+                    >المدينة<select>
+                      <option>اختر خياراً</option>
+                      <option>الخيار الأول</option>
+                      <option>الخيار الثاني</option>
+                    </select></label
+                  >
+                </div>
+              </section>
+              <section data-overview-component data-component="switch">
+                <h4>المفتاح</h4>
+                <div data-form-examples data-overview-inline>
+                  <label>إيقاف<input type="checkbox" role="switch" /></label
+                  ><label
+                    >تشغيل<input type="checkbox" role="switch" checked
+                  /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="checkbox">
+                <h4>مربع الاختيار</h4>
+                <div data-form-examples data-overview-inline>
+                  <label>محدد<input type="checkbox" checked /></label
+                  ><label
+                    >محدد جزئياً<input
+                      type="checkbox"
+                      data-indeterminate /></label
+                  ><label>غير متاح<input type="checkbox" disabled /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="radio">
+                <h4>زر الاختيار</h4>
+                <div
+                  data-form-examples
+                  data-overview-inline
+                  role="group"
+                  aria-label="الخيارات"
+                >
+                  <label
+                    >شهري<input
+                      type="radio"
+                      name="overview-rtl-light-classless-billing"
+                      value="monthly"
+                      checked /></label
+                  ><label
+                    >سنوي<input
+                      type="radio"
+                      name="overview-rtl-light-classless-billing"
+                      value="yearly"
+                  /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="loader">
+                <h4>مؤشر التحميل</h4>
+                <div data-form-examples>
+                  <div
+                    id="overview-rtl-light-classless-busy"
+                    data-loader-panel
+                    aria-busy="true"
+                  >
+                    <p>يبقى المحتوى في مكانه أثناء التحميل.</p>
+                  </div>
+                  <button
+                    type="button"
+                    data-busy-toggle
+                    aria-controls="overview-rtl-light-classless-busy"
+                    aria-pressed="true"
+                  >
+                    تبديل التحميل
+                  </button>
+                </div>
+              </section>
+              <h3 lang="en">Extended</h3>
+              <section data-overview-component data-component="button">
+                <h4>الأزرار</h4>
+                <div data-button-examples>
+                  <button type="button" class="trace-primary" data-loader-demo>
+                    أساسي</button
+                  ><button
+                    type="button"
+                    class="trace-secondary"
+                    data-loader-demo
+                  >
+                    ثانوي</button
+                  ><button type="button" class="trace-outline" data-loader-demo>
+                    بإطار</button
+                  ><button type="button" class="trace-danger" data-loader-demo>
+                    خطر
+                  </button>
+                </div>
+              </section>
+              <section data-overview-component data-component="table">
+                <h4>الجداول</h4>
+                <div
+                  class="trace-table-wrap"
+                  tabindex="0"
+                  role="region"
+                  aria-label="قائمة المكونات"
+                >
+                  <table class="trace-striped trace-hover trace-compact">
+                    <caption>
+                      قائمة المكونات
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">المكون</th>
+                        <th scope="col">العدد</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">حقل الإدخال</th>
+                        <td class="trace-numeric">12</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">قائمة الاختيار</th>
+                        <td class="trace-numeric">8</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+              <section data-overview-component data-component="input">
+                <h4>حقول الإدخال</h4>
+                <div data-form-examples>
+                  <label
+                    >البحث مع أيقونة<span class="trace-input-wrap"
+                      ><span
+                        class="trace-icon trace-input-icon-start"
+                        aria-hidden="true"
+                        ><svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="10" cy="10" r="6" />
+                          <path d="m15 15 5 5" /></svg></span
+                      ><input type="search" placeholder="بحث" /></span
+                  ></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="file">
+                <h4>رفع الملفات</h4>
+                <div data-form-examples>
+                  <label>صغير<input type="file" class="trace-small" /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="textarea">
+                <h4>منطقة النص</h4>
+                <div data-form-examples>
+                  <label
+                    >كبير<textarea
+                      rows="2"
+                      placeholder="اكتب رسالة"
+                      class="trace-large"
+                    ></textarea>
+                  </label>
+                </div>
+              </section>
+              <section data-overview-component data-component="range">
+                <h4>شريط التمرير</h4>
+                <div data-form-examples>
+                  <label
+                    >صغير<input type="range" class="trace-small" value="25"
+                  /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="select">
+                <h4>قائمة الاختيار</h4>
+                <div data-form-examples>
+                  <label
+                    >سهم مخصص<span class="trace-select"
+                      ><select>
+                        <option>اختر خياراً</option>
+                        <option>الخيار الأول</option>
+                        <option>الخيار الثاني</option>
+                      </select></span
+                    ></label
+                  >
+                </div>
+              </section>
+              <section data-overview-component data-component="switch">
+                <h4>المفتاح</h4>
+                <div data-form-examples data-overview-inline>
+                  <label
+                    >مع أيقونة<span class="trace-switch"
+                      ><input type="checkbox" role="switch" /><span
+                        class="trace-icon"
+                        aria-hidden="true"
+                        ><svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="10" cy="10" r="6" />
+                          <path d="m15 15 5 5" /></svg></span></span
+                  ></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="checkbox">
+                <h4>مربع الاختيار</h4>
+                <div data-form-examples data-overview-inline>
+                  <label
+                    >صغير<input
+                      type="checkbox"
+                      class="trace-small"
+                      name="overview-rtl-light-extended-checkbox"
+                      value="small" /></label
+                  ><label
+                    >كبير<input
+                      type="checkbox"
+                      class="trace-large"
+                      name="overview-rtl-light-extended-checkbox"
+                      value="large"
+                  /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="radio">
+                <h4>زر الاختيار</h4>
+                <div
+                  data-form-examples
+                  data-overview-inline
+                  role="group"
+                  aria-label="الخيارات"
+                >
+                  <label
+                    >صغير<input
+                      type="radio"
+                      class="trace-small"
+                      name="overview-rtl-light-extended-radio"
+                      value="small" /></label
+                  ><label
+                    >كبير<input
+                      type="radio"
+                      class="trace-large"
+                      name="overview-rtl-light-extended-radio"
+                      value="large"
+                  /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="icon">
+                <h4>الأيقونات</h4>
+                <p>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="10" cy="10" r="6" />
+                      <path d="m15 15 5 5" /></svg
+                  ></span>
+                  بحث
+                </p>
+                <p>
+                  <span
+                    class="trace-icon"
+                    style="--trace-icon-size: 2rem"
+                    aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="10" cy="10" r="6" />
+                      <path d="m15 15 5 5" /></svg
+                  ></span>
+                  حجم مخصص: 2rem
+                </p>
+              </section>
+              <section data-overview-component data-component="loader">
+                <h4>مؤشر التحميل</h4>
+                <span
+                  class="trace-loader"
+                  role="status"
+                  aria-label="جار التحميل"
+                ></span>
+              </section>
+            </div>
+          </div>
+          <div data-mode="dark" aria-label="RTL, dark theme">
+            <h3>Dark theme</h3>
+            <div lang="ar" dir="rtl">
+              <h3 lang="en">Classless</h3>
+              <section data-overview-component data-component="typography">
+                <h4>الطباعة</h4>
+                <p>
+                  نص يحتوي على <strong>كلمات بارزة</strong> و<em>تأكيد</em>
+                  و<mark>تمييز</mark>.
+                </p>
+                <p><code>--trace-font-body</code> <kbd>Tab</kbd></p>
+              </section>
+              <section data-overview-component data-component="link">
+                <h4>الروابط</h4>
+                <p><a href="./index.html">تصفح المكونات</a></p>
+              </section>
+              <section data-overview-component data-component="button">
+                <h4>الأزرار</h4>
+                <div data-button-examples>
+                  <button type="button">حفظ</button>
+                </div>
+              </section>
+              <section data-overview-component data-component="table">
+                <h4>الجداول</h4>
+                <div data-table-example>
+                  <table>
+                    <caption>
+                      قائمة المكونات
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">المكون</th>
+                        <th scope="col">العدد</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">حقل الإدخال</th>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">قائمة الاختيار</th>
+                        <td>8</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+              <section data-overview-component data-component="input">
+                <h4>حقول الإدخال</h4>
+                <div data-form-examples>
+                  <label>الاسم<input placeholder="مثلاً، سارة" /></label
+                  ><label>التاريخ<input type="date" /></label
+                  ><label
+                    >غير صالح<input
+                      aria-invalid="true"
+                      aria-describedby="overview-rtl-dark-classless-input-error"
+                    /><small id="overview-rtl-dark-classless-input-error"
+                      >تحقق من القيمة المدخلة.</small
+                    ></label
+                  >
+                </div>
+              </section>
+              <section data-overview-component data-component="file">
+                <h4>رفع الملفات</h4>
+                <div data-form-examples>
+                  <label>ملف واحد<input type="file" /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="textarea">
+                <h4>منطقة النص</h4>
+                <div data-form-examples>
+                  <label
+                    >الرسالة<textarea
+                      rows="2"
+                      placeholder="اكتب رسالة"
+                    ></textarea>
+                  </label>
+                </div>
+              </section>
+              <section data-overview-component data-component="range">
+                <h4>شريط التمرير</h4>
+                <div data-form-examples>
+                  <label
+                    >مستوى الصوت<input
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="40" /></label
+                  ><label
+                    >غير صالح<input
+                      type="range"
+                      value="90"
+                      aria-invalid="true"
+                      aria-describedby="overview-rtl-dark-classless-range-error"
+                    /><small id="overview-rtl-dark-classless-range-error"
+                      >اختر قيمة لا تزيد عن 80.</small
+                    ></label
+                  >
+                </div>
+              </section>
+              <section data-overview-component data-component="select">
+                <h4>قائمة الاختيار</h4>
+                <div data-form-examples>
+                  <label
+                    >المدينة<select>
+                      <option>اختر خياراً</option>
+                      <option>الخيار الأول</option>
+                      <option>الخيار الثاني</option>
+                    </select></label
+                  >
+                </div>
+              </section>
+              <section data-overview-component data-component="switch">
+                <h4>المفتاح</h4>
+                <div data-form-examples data-overview-inline>
+                  <label>إيقاف<input type="checkbox" role="switch" /></label
+                  ><label
+                    >تشغيل<input type="checkbox" role="switch" checked
+                  /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="checkbox">
+                <h4>مربع الاختيار</h4>
+                <div data-form-examples data-overview-inline>
+                  <label>محدد<input type="checkbox" checked /></label
+                  ><label
+                    >محدد جزئياً<input
+                      type="checkbox"
+                      data-indeterminate /></label
+                  ><label>غير متاح<input type="checkbox" disabled /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="radio">
+                <h4>زر الاختيار</h4>
+                <div
+                  data-form-examples
+                  data-overview-inline
+                  role="group"
+                  aria-label="الخيارات"
+                >
+                  <label
+                    >شهري<input
+                      type="radio"
+                      name="overview-rtl-dark-classless-billing"
+                      value="monthly"
+                      checked /></label
+                  ><label
+                    >سنوي<input
+                      type="radio"
+                      name="overview-rtl-dark-classless-billing"
+                      value="yearly"
+                  /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="loader">
+                <h4>مؤشر التحميل</h4>
+                <div data-form-examples>
+                  <div
+                    id="overview-rtl-dark-classless-busy"
+                    data-loader-panel
+                    aria-busy="true"
+                  >
+                    <p>يبقى المحتوى في مكانه أثناء التحميل.</p>
+                  </div>
+                  <button
+                    type="button"
+                    data-busy-toggle
+                    aria-controls="overview-rtl-dark-classless-busy"
+                    aria-pressed="true"
+                  >
+                    تبديل التحميل
+                  </button>
+                </div>
+              </section>
+              <h3 lang="en">Extended</h3>
+              <section data-overview-component data-component="button">
+                <h4>الأزرار</h4>
+                <div data-button-examples>
+                  <button type="button" class="trace-primary" data-loader-demo>
+                    أساسي</button
+                  ><button
+                    type="button"
+                    class="trace-secondary"
+                    data-loader-demo
+                  >
+                    ثانوي</button
+                  ><button type="button" class="trace-outline" data-loader-demo>
+                    بإطار</button
+                  ><button type="button" class="trace-danger" data-loader-demo>
+                    خطر
+                  </button>
+                </div>
+              </section>
+              <section data-overview-component data-component="table">
+                <h4>الجداول</h4>
+                <div
+                  class="trace-table-wrap"
+                  tabindex="0"
+                  role="region"
+                  aria-label="قائمة المكونات"
+                >
+                  <table class="trace-striped trace-hover trace-compact">
+                    <caption>
+                      قائمة المكونات
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">المكون</th>
+                        <th scope="col">العدد</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">حقل الإدخال</th>
+                        <td class="trace-numeric">12</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">قائمة الاختيار</th>
+                        <td class="trace-numeric">8</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+              <section data-overview-component data-component="input">
+                <h4>حقول الإدخال</h4>
+                <div data-form-examples>
+                  <label
+                    >البحث مع أيقونة<span class="trace-input-wrap"
+                      ><span
+                        class="trace-icon trace-input-icon-start"
+                        aria-hidden="true"
+                        ><svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="10" cy="10" r="6" />
+                          <path d="m15 15 5 5" /></svg></span
+                      ><input type="search" placeholder="بحث" /></span
+                  ></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="file">
+                <h4>رفع الملفات</h4>
+                <div data-form-examples>
+                  <label>صغير<input type="file" class="trace-small" /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="textarea">
+                <h4>منطقة النص</h4>
+                <div data-form-examples>
+                  <label
+                    >كبير<textarea
+                      rows="2"
+                      placeholder="اكتب رسالة"
+                      class="trace-large"
+                    ></textarea>
+                  </label>
+                </div>
+              </section>
+              <section data-overview-component data-component="range">
+                <h4>شريط التمرير</h4>
+                <div data-form-examples>
+                  <label
+                    >صغير<input type="range" class="trace-small" value="25"
+                  /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="select">
+                <h4>قائمة الاختيار</h4>
+                <div data-form-examples>
+                  <label
+                    >سهم مخصص<span class="trace-select"
+                      ><select>
+                        <option>اختر خياراً</option>
+                        <option>الخيار الأول</option>
+                        <option>الخيار الثاني</option>
+                      </select></span
+                    ></label
+                  >
+                </div>
+              </section>
+              <section data-overview-component data-component="switch">
+                <h4>المفتاح</h4>
+                <div data-form-examples data-overview-inline>
+                  <label
+                    >مع أيقونة<span class="trace-switch"
+                      ><input type="checkbox" role="switch" /><span
+                        class="trace-icon"
+                        aria-hidden="true"
+                        ><svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="10" cy="10" r="6" />
+                          <path d="m15 15 5 5" /></svg></span></span
+                  ></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="checkbox">
+                <h4>مربع الاختيار</h4>
+                <div data-form-examples data-overview-inline>
+                  <label
+                    >صغير<input
+                      type="checkbox"
+                      class="trace-small"
+                      name="overview-rtl-dark-extended-checkbox"
+                      value="small" /></label
+                  ><label
+                    >كبير<input
+                      type="checkbox"
+                      class="trace-large"
+                      name="overview-rtl-dark-extended-checkbox"
+                      value="large"
+                  /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="radio">
+                <h4>زر الاختيار</h4>
+                <div
+                  data-form-examples
+                  data-overview-inline
+                  role="group"
+                  aria-label="الخيارات"
+                >
+                  <label
+                    >صغير<input
+                      type="radio"
+                      class="trace-small"
+                      name="overview-rtl-dark-extended-radio"
+                      value="small" /></label
+                  ><label
+                    >كبير<input
+                      type="radio"
+                      class="trace-large"
+                      name="overview-rtl-dark-extended-radio"
+                      value="large"
+                  /></label>
+                </div>
+              </section>
+              <section data-overview-component data-component="icon">
+                <h4>الأيقونات</h4>
+                <p>
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="10" cy="10" r="6" />
+                      <path d="m15 15 5 5" /></svg
+                  ></span>
+                  بحث
+                </p>
+                <p>
+                  <span
+                    class="trace-icon"
+                    style="--trace-icon-size: 2rem"
+                    aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="10" cy="10" r="6" />
+                      <path d="m15 15 5 5" /></svg
+                  ></span>
+                  حجم مخصص: 2rem
+                </p>
+              </section>
+              <section data-overview-component data-component="loader">
+                <h4>مؤشر التحميل</h4>
+                <span
+                  class="trace-loader"
+                  role="status"
+                  aria-label="جار التحميل"
+                ></span>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

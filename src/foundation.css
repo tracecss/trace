@@ -1,0 +1,35 @@
+@import "./variables.css";
+
+@layer trace.foundation {
+  :where(*, *::before, *::after) {
+    box-sizing: border-box;
+  }
+
+  :where(body) {
+    margin: 0;
+    font-family: var(--trace-font-body);
+    background-color: var(--trace-bg);
+    color: var(--trace-text);
+  }
+
+  :where(button, input, select, textarea) {
+    font: inherit;
+  }
+
+  :where(:root) {
+    color-scheme: light dark;
+  }
+
+  :where([data-mode="light"], [data-mode="dark"]) {
+    background-color: var(--trace-bg);
+    color: var(--trace-text);
+  }
+
+  :where([data-mode="light"]) {
+    color-scheme: light;
+  }
+
+  :where([data-mode="dark"]) {
+    color-scheme: dark;
+  }
+}

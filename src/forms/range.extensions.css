@@ -1,0 +1,13 @@
+@layer trace.extensions {
+  :where(input[type="range"].trace-small) {
+    --trace-range-thumb-size: 1rem;
+    --trace-range-track-size: 0.25rem;
+    --trace-range-height: 1.75rem;
+  }
+
+  :where(input[type="range"].trace-large) {
+    --trace-range-thumb-size: 1.5rem;
+    --trace-range-track-size: 0.5rem;
+    --trace-range-height: 2.5rem;
+  }
+}

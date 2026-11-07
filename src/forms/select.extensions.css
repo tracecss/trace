@@ -1,0 +1,107 @@
+@layer trace.extensions {
+  :where(label:has(> .trace-select > select)) {
+    display: grid;
+    gap: 0.25rem;
+    min-inline-size: 0;
+    color: var(--trace-select-text);
+    cursor: pointer;
+    & > small {
+      margin: 0;
+      line-height: 1.5;
+    }
+    &:has(> .trace-select > select:disabled) {
+      color: color-mix(in srgb, var(--trace-select-text), transparent 50%);
+      cursor: not-allowed;
+    }
+    &:has(
+        > .trace-select > select[aria-invalid="true"],
+        > .trace-select > select:user-invalid
+      )
+      > small:last-child {
+      color: var(--trace-select-error);
+    }
+  }
+  :where(label:has(> .trace-select > select) + small) {
+    display: block;
+    margin-block-start: 0.25rem;
+    line-height: 1.5;
+  }
+  :where(
+    label:has(
+        > .trace-select > select[aria-invalid="true"],
+        > .trace-select > select:user-invalid
+      )
+      + small
+  ) {
+    color: var(--trace-select-error);
+  }
+  :where(.trace-select) {
+    --_trace-select-arrow-color: var(--trace-select-border);
+    position: relative;
+    display: grid;
+    min-inline-size: 0;
+    font-size: var(--trace-select-font-size);
+
+    &:has(> select.trace-small) {
+      --trace-select-padding-inline: 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    &:has(> select.trace-large) {
+      --trace-select-padding-inline: 0.75rem;
+      font-size: 1.125rem;
+    }
+
+    &:has(> select:focus) {
+      --_trace-select-arrow-color: var(--trace-select-focus);
+    }
+
+    &:has(> select[aria-invalid="true"], > select:user-invalid) {
+      --_trace-select-arrow-color: var(--trace-select-error);
+    }
+  }
+
+  :where(
+    .trace-select:has(> select:not([multiple]):not([size])),
+    .trace-select:has(> select:not([multiple])[size="0"]),
+    .trace-select:has(> select:not([multiple])[size="1"])
+  )::after {
+    content: "";
+    position: absolute;
+    inset-inline-end: var(--trace-select-arrow-offset);
+    inset-block: 0;
+    margin-block: auto;
+    inline-size: var(--trace-select-arrow-size);
+    block-size: var(--trace-select-arrow-size);
+    background-color: var(--_trace-select-arrow-color);
+    mask: var(--trace-select-arrow) center / contain no-repeat;
+    pointer-events: none;
+  }
+
+  :where(.trace-select > select) {
+    background-image: none;
+  }
+
+  :where(.trace-select:has(> select:disabled))::after {
+    opacity: 0.5;
+  }
+
+  @media (forced-colors: active) {
+    :where(.trace-select)::after {
+      display: none;
+    }
+  }
+  :where(select.trace-small) {
+    --trace-select-font-size: 0.875rem;
+    --trace-select-line-height: 1.25rem;
+    --trace-select-padding-block: 0.25rem;
+    --trace-select-padding-inline: 0.5rem;
+  }
+
+  :where(select.trace-large) {
+    --trace-select-font-size: 1.125rem;
+    --trace-select-line-height: 1.75rem;
+    --trace-select-padding-block: 0.5rem;
+    --trace-select-padding-inline: 0.75rem;
+  }
+}

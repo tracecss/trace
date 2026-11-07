@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>File upload</title>
+    <script src="./playground.js"></script>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a>
+      <a href="./all.html">All components</a>
+    </header>
+    <main data-theme-preview>
+      <div data-mode="light" aria-label="Light theme">
+        <h3>Classless</h3>
+        <div data-input-examples>
+          <label>Single file<input type="file" /></label
+          ><label>Multiple files<input type="file" multiple /></label
+          ><label>Images only<input type="file" accept="image/*" /></label
+          ><label>Disabled<input type="file" disabled /></label
+          ><label
+            >Invalid<input type="file" aria-invalid="true" /><small
+              >Select a supported file.</small
+            ></label
+          >
+        </div>
+        <h3>Extensions</h3>
+        <div data-input-examples>
+          <label>Small<input type="file" class="trace-small" /></label
+          ><label>Large<input type="file" class="trace-large" /></label>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <div data-input-examples>
+            <label>ملف واحد<input type="file" /></label
+            ><label>ملفات متعددة<input type="file" multiple /></label
+            ><label>صور فقط<input type="file" accept="image/*" /></label
+            ><label>غير متاح<input type="file" disabled /></label
+            ><label
+              >غير صالح<input type="file" aria-invalid="true" /><small
+                >اختر ملفًا مدعومًا.</small
+              ></label
+            >
+          </div>
+          <h3>امتدادات</h3>
+          <div data-input-examples>
+            <label>صغير<input type="file" class="trace-small" /></label
+            ><label>كبير<input type="file" class="trace-large" /></label>
+          </div>
+        </section>
+      </div>
+      <div data-mode="dark" aria-label="Dark theme">
+        <h3>Classless</h3>
+        <div data-input-examples>
+          <label>Single file<input type="file" /></label
+          ><label>Multiple files<input type="file" multiple /></label
+          ><label>Images only<input type="file" accept="image/*" /></label
+          ><label>Disabled<input type="file" disabled /></label
+          ><label
+            >Invalid<input type="file" aria-invalid="true" /><small
+              >Select a supported file.</small
+            ></label
+          >
+        </div>
+        <h3>Extensions</h3>
+        <div data-input-examples>
+          <label>Small<input type="file" class="trace-small" /></label
+          ><label>Large<input type="file" class="trace-large" /></label>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <div data-input-examples>
+            <label>ملف واحد<input type="file" /></label
+            ><label>ملفات متعددة<input type="file" multiple /></label
+            ><label>صور فقط<input type="file" accept="image/*" /></label
+            ><label>غير متاح<input type="file" disabled /></label
+            ><label
+              >غير صالح<input type="file" aria-invalid="true" /><small
+                >اختر ملفًا مدعومًا.</small
+              ></label
+            >
+          </div>
+          <h3>امتدادات</h3>
+          <div data-input-examples>
+            <label>صغير<input type="file" class="trace-small" /></label
+            ><label>كبير<input type="file" class="trace-large" /></label>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

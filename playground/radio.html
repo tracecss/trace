@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Radio</title>
+    <script src="./playground.js"></script>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a>
+      <a href="./all.html">All components</a>
+    </header>
+    <main data-theme-preview>
+      <div data-mode="light" aria-label="Light theme">
+        <h3>Classless</h3>
+        <div data-form-examples>
+          <div role="group" aria-label="Billing period">
+            <div data-form-examples>
+              <label
+                ><input type="radio" name="billing-light-en" checked />
+                Monthly</label
+              ><label
+                ><input type="radio" name="billing-light-en" /> Yearly</label
+              ><label
+                ><input type="radio" name="billing-light-en" disabled />
+                Unavailable</label
+              >
+            </div>
+          </div>
+          <label
+            ><input type="radio" name="error-light-en" aria-invalid="true" />
+            Invalid</label
+          >
+        </div>
+        <h3>Extensions</h3>
+        <div data-form-examples>
+          <div role="group" aria-label="Sizes">
+            <div data-form-examples>
+              <label
+                ><input type="radio" name="size-light-en" class="trace-small" />
+                Small</label
+              ><label><input type="radio" name="size-light-en" /> Medium</label
+              ><label
+                ><input type="radio" name="size-light-en" class="trace-large" />
+                Large</label
+              >
+            </div>
+          </div>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>Classless</h3>
+          <div data-form-examples>
+            <div role="group" aria-label="فترة الفوترة">
+              <div data-form-examples>
+                <label
+                  ><input type="radio" name="billing-light-ar" checked />
+                  شهري</label
+                ><label
+                  ><input type="radio" name="billing-light-ar" /> سنوي</label
+                ><label
+                  ><input type="radio" name="billing-light-ar" disabled /> غير
+                  متاح</label
+                >
+              </div>
+            </div>
+            <label
+              ><input type="radio" name="error-light-ar" aria-invalid="true" />
+              غير صالح</label
+            >
+          </div>
+          <h3>Extensions</h3>
+          <div data-form-examples>
+            <div role="group" aria-label="الأحجام">
+              <div data-form-examples>
+                <label
+                  ><input
+                    type="radio"
+                    name="size-light-ar"
+                    class="trace-small"
+                  />
+                  صغير</label
+                ><label><input type="radio" name="size-light-ar" /> متوسط</label
+                ><label
+                  ><input
+                    type="radio"
+                    name="size-light-ar"
+                    class="trace-large"
+                  />
+                  كبير</label
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div data-mode="dark" aria-label="Dark theme">
+        <h3>Classless</h3>
+        <div data-form-examples>
+          <div role="group" aria-label="Billing period">
+            <div data-form-examples>
+              <label
+                ><input type="radio" name="billing-dark-en" checked />
+                Monthly</label
+              ><label
+                ><input type="radio" name="billing-dark-en" /> Yearly</label
+              ><label
+                ><input type="radio" name="billing-dark-en" disabled />
+                Unavailable</label
+              >
+            </div>
+          </div>
+          <label
+            ><input type="radio" name="error-dark-en" aria-invalid="true" />
+            Invalid</label
+          >
+        </div>
+        <h3>Extensions</h3>
+        <div data-form-examples>
+          <div role="group" aria-label="Sizes">
+            <div data-form-examples>
+              <label
+                ><input type="radio" name="size-dark-en" class="trace-small" />
+                Small</label
+              ><label><input type="radio" name="size-dark-en" /> Medium</label
+              ><label
+                ><input type="radio" name="size-dark-en" class="trace-large" />
+                Large</label
+              >
+            </div>
+          </div>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>Classless</h3>
+          <div data-form-examples>
+            <div role="group" aria-label="فترة الفوترة">
+              <div data-form-examples>
+                <label
+                  ><input type="radio" name="billing-dark-ar" checked />
+                  شهري</label
+                ><label
+                  ><input type="radio" name="billing-dark-ar" /> سنوي</label
+                ><label
+                  ><input type="radio" name="billing-dark-ar" disabled /> غير
+                  متاح</label
+                >
+              </div>
+            </div>
+            <label
+              ><input type="radio" name="error-dark-ar" aria-invalid="true" />
+              غير صالح</label
+            >
+          </div>
+          <h3>Extensions</h3>
+          <div data-form-examples>
+            <div role="group" aria-label="الأحجام">
+              <div data-form-examples>
+                <label
+                  ><input
+                    type="radio"
+                    name="size-dark-ar"
+                    class="trace-small"
+                  />
+                  صغير</label
+                ><label><input type="radio" name="size-dark-ar" /> متوسط</label
+                ><label
+                  ><input
+                    type="radio"
+                    name="size-dark-ar"
+                    class="trace-large"
+                  />
+                  كبير</label
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

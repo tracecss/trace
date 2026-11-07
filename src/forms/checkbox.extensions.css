@@ -1,0 +1,9 @@
+@layer trace.extensions {
+  :where(input[type="checkbox"]:not([role="switch"]).trace-small) {
+    --trace-checkbox-size: 1rem;
+  }
+
+  :where(input[type="checkbox"]:not([role="switch"]).trace-large) {
+    --trace-checkbox-size: 1.5rem;
+  }
+}

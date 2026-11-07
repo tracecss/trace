@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Loader</title>
+    <script src="./playground.js"></script>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a>
+      <a href="./all.html">All components</a>
+    </header>
+    <main data-theme-preview>
+      <div data-mode="light" aria-label="Light theme">
+        <h3>Classless</h3>
+        <h4>Buttons</h4>
+        <div data-form-examples>
+          <button type="button" aria-busy="true" disabled>Saving</button>
+        </div>
+        <h4>Container loading</h4>
+        <div data-form-examples>
+          <div id="busy-container-1" aria-busy="true" data-loader-panel>
+            <h4>Order summary</h4>
+            <p>
+              The loader covers the content without changing its dimensions.
+            </p>
+            <p><a href="./index.html">Browse components</a></p>
+          </div>
+          <button
+            type="button"
+            data-busy-toggle
+            aria-controls="busy-container-1"
+            aria-pressed="true"
+          >
+            Toggle loading
+          </button>
+        </div>
+        <h3>Extensions</h3>
+        <div data-form-examples>
+          <span class="trace-loader" role="status" aria-label="Loading"></span
+          ><button type="button" aria-busy="true" disabled>
+            <span class="trace-icon" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <path d="M8 9h8M8 14h5" /></svg></span
+            >Adding</button
+          ><button
+            type="button"
+            class="trace-outline"
+            aria-busy="true"
+            disabled
+          >
+            Loading
+          </button>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <h4>الأزرار</h4>
+          <div data-form-examples>
+            <button type="button" aria-busy="true" disabled>جار الحفظ</button>
+          </div>
+          <h4>تحميل المحتوى</h4>
+          <div data-form-examples>
+            <div id="busy-container-2" aria-busy="true" data-loader-panel>
+              <h4>ملخص الطلب</h4>
+              <p>يظهر مؤشر التحميل فوق المحتوى دون تغيير أبعاده.</p>
+              <p><a href="./index.html">عرض المكونات</a></p>
+            </div>
+            <button
+              type="button"
+              data-busy-toggle
+              aria-controls="busy-container-2"
+              aria-pressed="true"
+            >
+              تبديل التحميل
+            </button>
+          </div>
+          <h3>امتدادات</h3>
+          <div data-form-examples>
+            <span
+              class="trace-loader"
+              role="status"
+              aria-label="جار التحميل"
+            ></span
+            ><button type="button" aria-busy="true" disabled>
+              <span class="trace-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="4" y="4" width="16" height="16" rx="2" />
+                  <path d="M8 9h8M8 14h5" /></svg></span
+              >جار الإضافة</button
+            ><button
+              type="button"
+              class="trace-outline"
+              aria-busy="true"
+              disabled
+            >
+              جار التحميل
+            </button>
+          </div>
+        </section>
+      </div>
+      <div data-mode="dark" aria-label="Dark theme">
+        <h3>Classless</h3>
+        <h4>Buttons</h4>
+        <div data-form-examples>
+          <button type="button" aria-busy="true" disabled>Saving</button>
+        </div>
+        <h4>Container loading</h4>
+        <div data-form-examples>
+          <div id="busy-container-3" aria-busy="true" data-loader-panel>
+            <h4>Order summary</h4>
+            <p>
+              The loader covers the content without changing its dimensions.
+            </p>
+            <p><a href="./index.html">Browse components</a></p>
+          </div>
+          <button
+            type="button"
+            data-busy-toggle
+            aria-controls="busy-container-3"
+            aria-pressed="true"
+          >
+            Toggle loading
+          </button>
+        </div>
+        <h3>Extensions</h3>
+        <div data-form-examples>
+          <span class="trace-loader" role="status" aria-label="Loading"></span
+          ><button type="button" aria-busy="true" disabled>
+            <span class="trace-icon" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <path d="M8 9h8M8 14h5" /></svg></span
+            >Adding</button
+          ><button
+            type="button"
+            class="trace-outline"
+            aria-busy="true"
+            disabled
+          >
+            Loading
+          </button>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <h4>الأزرار</h4>
+          <div data-form-examples>
+            <button type="button" aria-busy="true" disabled>جار الحفظ</button>
+          </div>
+          <h4>تحميل المحتوى</h4>
+          <div data-form-examples>
+            <div id="busy-container-4" aria-busy="true" data-loader-panel>
+              <h4>ملخص الطلب</h4>
+              <p>يظهر مؤشر التحميل فوق المحتوى دون تغيير أبعاده.</p>
+              <p><a href="./index.html">عرض المكونات</a></p>
+            </div>
+            <button
+              type="button"
+              data-busy-toggle
+              aria-controls="busy-container-4"
+              aria-pressed="true"
+            >
+              تبديل التحميل
+            </button>
+          </div>
+          <h3>امتدادات</h3>
+          <div data-form-examples>
+            <span
+              class="trace-loader"
+              role="status"
+              aria-label="جار التحميل"
+            ></span
+            ><button type="button" aria-busy="true" disabled>
+              <span class="trace-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="4" y="4" width="16" height="16" rx="2" />
+                  <path d="M8 9h8M8 14h5" /></svg></span
+              >جار الإضافة</button
+            ><button
+              type="button"
+              class="trace-outline"
+              aria-busy="true"
+              disabled
+            >
+              جار التحميل
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

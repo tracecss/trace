@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Inputs</title>
+    <script src="./playground.js"></script>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a>
+      <a href="./all.html">All components</a>
+    </header>
+    <main data-theme-preview>
+      <div data-mode="light" aria-label="Light theme">
+        <h3>Classless</h3>
+        <div data-input-examples>
+          <label>Name<input placeholder="For example, Anna" /></label
+          ><label
+            >Email<input type="email" placeholder="name@example.com" /></label
+          ><label>Password<input type="password" value="password" /></label
+          ><label>Date<input type="date" /></label
+          ><label>Color<input type="color" value="#174f63" /></label
+          ><label
+            >Invalid<input aria-invalid="true" value="Invalid value" /><small
+              >Check the entered data.</small
+            ></label
+          ><label
+            >Read-only<input
+              readonly
+              value="This value cannot be changed" /></label
+          ><label>Disabled<input disabled value="Disabled input" /></label>
+        </div>
+        <h3>Extensions</h3>
+        <div data-input-examples>
+          <label>Small<input class="trace-small" placeholder="Small" /></label
+          ><label>Large<input class="trace-large" placeholder="Large" /></label
+          ><label
+            >Search
+            <div class="trace-input-wrap">
+              <span class="trace-icon trace-input-icon-start" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="10" cy="10" r="6"></circle>
+                  <path d="m15 15 5 5"></path></svg></span
+              ><input type="search" placeholder="Find a component" /></div
+          ></label>
+          <label
+            >Trailing icon
+            <div class="trace-input-wrap">
+              <input placeholder="Enter a value" /><span
+                class="trace-icon trace-input-icon-end"
+                aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m5 12 4 4 10-10" /></svg
+              ></span></div
+          ></label>
+          <label
+            >Two icons
+            <div class="trace-input-wrap">
+              <span class="trace-icon trace-input-icon-start" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="10" cy="10" r="6" />
+                  <path d="m15 15 5 5" /></svg></span
+              ><input placeholder="Enter a value" /><span
+                class="trace-icon trace-input-icon-end"
+                aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m5 12 4 4 10-10" /></svg
+              ></span></div
+          ></label>
+          <div>
+            <label for="password-visibility-0"
+              >Password with visibility button</label
+            >
+            <div class="trace-input-wrap">
+              <input
+                id="password-visibility-0"
+                type="password"
+                value="example-password"
+              /><button
+                type="button"
+                data-password-toggle
+                aria-controls="password-visibility-0"
+                aria-label="Show password"
+                aria-pressed="false"
+              >
+                <span class="trace-icon" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
+                    <circle cx="12" cy="12" r="3" /></svg
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>Classless</h3>
+          <div data-input-examples>
+            <label>الاسم<input placeholder="مثلاً، سارة" /></label
+            ><label
+              >البريد الإلكتروني<input
+                type="email"
+                dir="ltr"
+                placeholder="name@example.com" /></label
+            ><label>كلمة المرور<input type="password" value="password" /></label
+            ><label>التاريخ<input type="date" /></label
+            ><label>اللون<input type="color" value="#174f63" /></label
+            ><label
+              >قيمة غير صحيحة<input
+                aria-invalid="true"
+                value="قيمة غير صحيحة"
+              /><small>تحقق من البيانات المدخلة.</small></label
+            ><label
+              >للقراءة فقط<input
+                readonly
+                value="لا يمكن تغيير هذه القيمة" /></label
+            ><label>غير متاح<input disabled value="حقل غير متاح" /></label>
+          </div>
+          <h3>Extensions</h3>
+          <div data-input-examples>
+            <label>صغير<input class="trace-small" placeholder="صغير" /></label
+            ><label>كبير<input class="trace-large" placeholder="كبير" /></label
+            ><label
+              >البحث
+              <div class="trace-input-wrap">
+                <span
+                  class="trace-icon trace-input-icon-start"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="10" cy="10" r="6"></circle>
+                    <path d="m15 15 5 5"></path></svg></span
+                ><input type="search" placeholder="ابحث عن مكون" /></div
+            ></label>
+            <label
+              >أيقونة في النهاية
+              <div class="trace-input-wrap">
+                <input placeholder="اكتب هنا" /><span
+                  class="trace-icon trace-input-icon-end"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m5 12 4 4 10-10" /></svg
+                ></span></div
+            ></label>
+            <label
+              >أيقونتان
+              <div class="trace-input-wrap">
+                <span
+                  class="trace-icon trace-input-icon-start"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="10" cy="10" r="6" />
+                    <path d="m15 15 5 5" /></svg></span
+                ><input placeholder="اكتب هنا" /><span
+                  class="trace-icon trace-input-icon-end"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m5 12 4 4 10-10" /></svg
+                ></span></div
+            ></label>
+            <div>
+              <label for="password-visibility-1">كلمة المرور مع زر إظهار</label>
+              <div class="trace-input-wrap">
+                <input
+                  id="password-visibility-1"
+                  type="password"
+                  value="example-password"
+                /><button
+                  type="button"
+                  data-password-toggle
+                  aria-controls="password-visibility-1"
+                  aria-label="إظهار كلمة المرور"
+                  aria-pressed="false"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
+                      <circle cx="12" cy="12" r="3" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div data-mode="dark" aria-label="Dark theme">
+        <h3>Classless</h3>
+        <div data-input-examples>
+          <label>Name<input placeholder="For example, Anna" /></label
+          ><label
+            >Email<input type="email" placeholder="name@example.com" /></label
+          ><label>Password<input type="password" value="password" /></label
+          ><label>Date<input type="date" /></label
+          ><label>Color<input type="color" value="#174f63" /></label
+          ><label
+            >Invalid<input aria-invalid="true" value="Invalid value" /><small
+              >Check the entered data.</small
+            ></label
+          ><label
+            >Read-only<input
+              readonly
+              value="This value cannot be changed" /></label
+          ><label>Disabled<input disabled value="Disabled input" /></label>
+        </div>
+        <h3>Extensions</h3>
+        <div data-input-examples>
+          <label>Small<input class="trace-small" placeholder="Small" /></label
+          ><label>Large<input class="trace-large" placeholder="Large" /></label
+          ><label
+            >Search
+            <div class="trace-input-wrap">
+              <span class="trace-icon trace-input-icon-start" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="10" cy="10" r="6"></circle>
+                  <path d="m15 15 5 5"></path></svg></span
+              ><input type="search" placeholder="Find a component" /></div
+          ></label>
+          <label
+            >Trailing icon
+            <div class="trace-input-wrap">
+              <input placeholder="Enter a value" /><span
+                class="trace-icon trace-input-icon-end"
+                aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m5 12 4 4 10-10" /></svg
+              ></span></div
+          ></label>
+          <label
+            >Two icons
+            <div class="trace-input-wrap">
+              <span class="trace-icon trace-input-icon-start" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="10" cy="10" r="6" />
+                  <path d="m15 15 5 5" /></svg></span
+              ><input placeholder="Enter a value" /><span
+                class="trace-icon trace-input-icon-end"
+                aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m5 12 4 4 10-10" /></svg
+              ></span></div
+          ></label>
+          <div>
+            <label for="password-visibility-2"
+              >Password with visibility button</label
+            >
+            <div class="trace-input-wrap">
+              <input
+                id="password-visibility-2"
+                type="password"
+                value="example-password"
+              /><button
+                type="button"
+                data-password-toggle
+                aria-controls="password-visibility-2"
+                aria-label="Show password"
+                aria-pressed="false"
+              >
+                <span class="trace-icon" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
+                    <circle cx="12" cy="12" r="3" /></svg
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>Classless</h3>
+          <div data-input-examples>
+            <label>الاسم<input placeholder="مثلاً، سارة" /></label
+            ><label
+              >البريد الإلكتروني<input
+                type="email"
+                dir="ltr"
+                placeholder="name@example.com" /></label
+            ><label>كلمة المرور<input type="password" value="password" /></label
+            ><label>التاريخ<input type="date" /></label
+            ><label>اللون<input type="color" value="#174f63" /></label
+            ><label
+              >قيمة غير صحيحة<input
+                aria-invalid="true"
+                value="قيمة غير صحيحة"
+              /><small>تحقق من البيانات المدخلة.</small></label
+            ><label
+              >للقراءة فقط<input
+                readonly
+                value="لا يمكن تغيير هذه القيمة" /></label
+            ><label>غير متاح<input disabled value="حقل غير متاح" /></label>
+          </div>
+          <h3>Extensions</h3>
+          <div data-input-examples>
+            <label>صغير<input class="trace-small" placeholder="صغير" /></label
+            ><label>كبير<input class="trace-large" placeholder="كبير" /></label
+            ><label
+              >البحث
+              <div class="trace-input-wrap">
+                <span
+                  class="trace-icon trace-input-icon-start"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="10" cy="10" r="6"></circle>
+                    <path d="m15 15 5 5"></path></svg></span
+                ><input type="search" placeholder="ابحث عن مكون" /></div
+            ></label>
+            <label
+              >أيقونة في النهاية
+              <div class="trace-input-wrap">
+                <input placeholder="اكتب هنا" /><span
+                  class="trace-icon trace-input-icon-end"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m5 12 4 4 10-10" /></svg
+                ></span></div
+            ></label>
+            <label
+              >أيقونتان
+              <div class="trace-input-wrap">
+                <span
+                  class="trace-icon trace-input-icon-start"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="10" cy="10" r="6" />
+                    <path d="m15 15 5 5" /></svg></span
+                ><input placeholder="اكتب هنا" /><span
+                  class="trace-icon trace-input-icon-end"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m5 12 4 4 10-10" /></svg
+                ></span></div
+            ></label>
+            <div>
+              <label for="password-visibility-3">كلمة المرور مع زر إظهار</label>
+              <div class="trace-input-wrap">
+                <input
+                  id="password-visibility-3"
+                  type="password"
+                  value="example-password"
+                /><button
+                  type="button"
+                  data-password-toggle
+                  aria-controls="password-visibility-3"
+                  aria-label="إظهار كلمة المرور"
+                  aria-pressed="false"
+                >
+                  <span class="trace-icon" aria-hidden="true"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
+                      <circle cx="12" cy="12" r="3" /></svg
+                  ></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

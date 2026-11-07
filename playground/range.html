@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Range</title>
+    <script src="./playground.js"></script>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a>
+      <a href="./all.html">All components</a>
+    </header>
+    <main data-theme-preview>
+      <div data-mode="light" aria-label="Light theme">
+        <h3>Classless</h3>
+        <div data-form-examples>
+          <label
+            >Default<input type="range" min="0" max="100" value="40" /><small
+              >Use the mouse or arrow keys.</small
+            ></label
+          ><label>Disabled<input type="range" disabled value="40" /></label
+          ><label
+            ><span id="range-error-1-label">Invalid</span
+            ><input
+              type="range"
+              min="0"
+              max="100"
+              aria-invalid="true"
+              aria-labelledby="range-error-1-label"
+              aria-describedby="range-error-1"
+              value="90"
+            /><small id="range-error-1"
+              >Choose a value no greater than 80.</small
+            ></label
+          >
+        </div>
+        <h3>Extensions</h3>
+        <div data-form-examples>
+          <label
+            >Small<input type="range" class="trace-small" value="25" /></label
+          ><label
+            >Large<input type="range" class="trace-large" value="75"
+          /></label>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <div data-form-examples>
+            <label
+              >افتراضي<input type="range" min="0" max="100" value="40" /><small
+                >استخدم الفأرة أو مفاتيح الأسهم.</small
+              ></label
+            ><label>غير متاح<input type="range" disabled value="40" /></label
+            ><label
+              ><span id="range-error-2-label">غير صالح</span
+              ><input
+                type="range"
+                min="0"
+                max="100"
+                aria-invalid="true"
+                aria-labelledby="range-error-2-label"
+                aria-describedby="range-error-2"
+                value="90"
+              /><small id="range-error-2"
+                >اختر قيمة لا تزيد عن 80.</small
+              ></label
+            >
+          </div>
+          <h3>امتدادات</h3>
+          <div data-form-examples>
+            <label
+              >صغير<input type="range" class="trace-small" value="25" /></label
+            ><label
+              >كبير<input type="range" class="trace-large" value="75"
+            /></label>
+          </div>
+        </section>
+      </div>
+      <div data-mode="dark" aria-label="Dark theme">
+        <h3>Classless</h3>
+        <div data-form-examples>
+          <label
+            >Default<input type="range" min="0" max="100" value="40" /><small
+              >Use the mouse or arrow keys.</small
+            ></label
+          ><label>Disabled<input type="range" disabled value="40" /></label
+          ><label
+            ><span id="range-error-3-label">Invalid</span
+            ><input
+              type="range"
+              min="0"
+              max="100"
+              aria-invalid="true"
+              aria-labelledby="range-error-3-label"
+              aria-describedby="range-error-3"
+              value="90"
+            /><small id="range-error-3"
+              >Choose a value no greater than 80.</small
+            ></label
+          >
+        </div>
+        <h3>Extensions</h3>
+        <div data-form-examples>
+          <label
+            >Small<input type="range" class="trace-small" value="25" /></label
+          ><label
+            >Large<input type="range" class="trace-large" value="75"
+          /></label>
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <div data-form-examples>
+            <label
+              >افتراضي<input type="range" min="0" max="100" value="40" /><small
+                >استخدم الفأرة أو مفاتيح الأسهم.</small
+              ></label
+            ><label>غير متاح<input type="range" disabled value="40" /></label
+            ><label
+              ><span id="range-error-4-label">غير صالح</span
+              ><input
+                type="range"
+                min="0"
+                max="100"
+                aria-invalid="true"
+                aria-labelledby="range-error-4-label"
+                aria-describedby="range-error-4"
+                value="90"
+              /><small id="range-error-4"
+                >اختر قيمة لا تزيد عن 80.</small
+              ></label
+            >
+          </div>
+          <h3>امتدادات</h3>
+          <div data-form-examples>
+            <label
+              >صغير<input type="range" class="trace-small" value="25" /></label
+            ><label
+              >كبير<input type="range" class="trace-large" value="75"
+            /></label>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

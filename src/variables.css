@@ -1,0 +1,112 @@
+@layer trace.foundation {
+  :where(:root) {
+    /* ┌─┐┌─┐┬  ┌─┐┌┬┐┌┬┐┌─┐ */
+    /* ├─┘├─┤│  ├┤  │  │ ├┤ */
+    /* ┴  ┴ ┴┴─┘└─┘ ┴  ┴ └─┘ */
+
+    /* background colors: #f0f3f5 / #0d171d */
+    --trace-bg-light: oklch(0.96244084 0.00418752 236.497272);
+    --trace-bg-dark: oklch(0.19790244 0.01898627 235.356673);
+
+    /* neutral colors: base and derived shades */
+    --trace-neutral: oklch(0.5 0 0);
+    --trace-neutral-lighter: oklch(from var(--trace-neutral) calc(l + 0.5) c h);
+    --trace-neutral-light: oklch(from var(--trace-neutral) calc(l + 0.25) c h);
+    --trace-neutral-dark: oklch(from var(--trace-neutral) calc(l - 0.25) c h);
+    --trace-neutral-darker: oklch(from var(--trace-neutral) calc(l - 0.5) c h);
+
+    /* text colors: #000018 / #e6e6e6 */
+    --trace-text-light: oklch(0.09448718 0.06547311 264.052021);
+    --trace-text-dark: oklch(0.92493953 0 0);
+
+    /* brand colors: base colors for both lightness scales */
+    --trace-primary: oklch(0.37661954 0.06820135 228.502841);
+    --trace-secondary: oklch(0.87959172 0.17036545 81.323506);
+
+    /* primary scale: lighter <- light <- base -> dark -> darker */
+    --trace-primary-lighter: oklch(
+      from var(--trace-primary) calc(l + (1 - l) * 0.6) c h
+    );
+    --trace-primary-light: oklch(
+      from var(--trace-primary) calc(l + (1 - l) * 0.3) c h
+    );
+    --trace-primary-dark: oklch(from var(--trace-primary) calc(l * 0.7) c h);
+    --trace-primary-darker: oklch(from var(--trace-primary) calc(l * 0.4) c h);
+
+    /* secondary scale: lighter <- light <- base -> dark -> darker */
+    --trace-secondary-lighter: oklch(
+      from var(--trace-secondary) calc(l + (1 - l) * 0.6) c h
+    );
+    --trace-secondary-light: oklch(
+      from var(--trace-secondary) calc(l + (1 - l) * 0.3) c h
+    );
+    --trace-secondary-dark: oklch(
+      from var(--trace-secondary) calc(l * 0.7) c h
+    );
+    --trace-secondary-darker: oklch(
+      from var(--trace-secondary) calc(l * 0.4) c h
+    );
+
+    /* danger color: #c22000 */
+    --trace-danger: oklch(0.52335823 0.19856372 31.958358);
+
+    /* success color: #32b67a */
+    --trace-success: oklch(0.69130035 0.14353044 158.707562);
+
+    /* ┌─┐┌─┐┌┐┌┌┬┐┌─┐ */
+    /* ├┤ │ ││││ │ └─┐ */
+    /* └  └─┘┘└┘ ┴ └─┘ */
+
+    --trace-font-family-emoji:
+      "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
+
+    --trace-font-family-sans:
+      system-ui, sans-serif, var(--trace-font-family-emoji);
+
+    --trace-font-family-mono:
+      ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono",
+      monospace, var(--trace-font-family-emoji);
+
+    --trace-font-body: var(--trace-font-family-sans);
+    --trace-font-heading: var(--trace-font-body);
+    --trace-font-code: var(--trace-font-family-mono);
+
+    /* ┬─┐┌─┐┌┬┐┬┬ ┬┌─┐ */
+    /* ├┬┘├─┤ ││││ │└─┐ */
+    /* ┴└─┴ ┴─┴┘┴└─┘└─┘ */
+
+    --trace-radius-none: 0;
+    --trace-radius-sm: 4px;
+    --trace-radius-full: 50%;
+
+    --trace-radius-control: var(--trace-radius-sm);
+
+    /* ┌─┐┌─┐┌─┐┌─┐┬┌┐┌┌─┐ */
+    /* └─┐├─┘├─┤│  │││││ ┬ */
+    /* └─┘┴  ┴ ┴└─┘┴┘└┘└─┘ */
+
+    --trace-control-padding-block: 0.625rem;
+    --trace-control-padding-inline: 1rem;
+
+    /* ┌─┐┬ ┬┌─┐┌┬┐┌─┐┬ ┬┌─┐ */
+    /* └─┐├─┤├─┤ │││ ││││└─┐ */
+    /* └─┘┴ ┴┴ ┴─┴┘└─┘└┴┘└─┘ */
+
+    --trace-shadow-color: light-dark(
+      oklch(from var(--trace-neutral-darker) l c h / 25%),
+      oklch(from var(--trace-neutral-lighter) l c h / 25%)
+    );
+    --trace-shadow: 5px 5px 0 0 var(--trace-shadow-color);
+
+    /* ┌┬┐┬ ┬┌─┐┌┬┐┌─┐ */
+    /*  │ ├─┤├┤ │││├┤ */
+    /*  ┴ ┴ ┴└─┘┴ ┴└─┘ */
+
+    --trace-bg: light-dark(var(--trace-bg-light), var(--trace-bg-dark));
+    --trace-text: light-dark(var(--trace-text-light), var(--trace-text-dark));
+    --trace-control-bg: light-dark(
+      var(--trace-neutral-lighter),
+      var(--trace-bg-dark)
+    );
+  }
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Links</title>
+    <script src="./playground.js"></script>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a>
+      <a href="./all.html">All components</a>
+    </header>
+    <main data-theme-preview>
+      <div data-mode="light" aria-label="Light theme">
+        <h3>Classless</h3>
+        <a href="./index.html">Back to home</a>
+        <p>A link <a href="./button.html">within text</a> remains readable.</p>
+        <a href="#destination-light">Jump to anchor ↓</a>
+
+        <p id="destination-light">Link target. Use Tab to check focus.</p>
+
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3 lang="en">Classless</h3>
+          <a href="./index.html">العودة إلى الصفحة الرئيسية</a>
+          <p>
+            يبقى <a href="./button.html">الرابط داخل النص</a> واضحًا وسهل
+            القراءة.
+          </p>
+          <a href="#destination-ar-light">الانتقال إلى الموضع المطلوب ↓</a>
+          <p id="destination-ar-light">
+            هذا هو موضع الرابط. استخدم مفتاح <bdi>Tab</bdi> للتحقق من التركيز.
+          </p>
+          <p>
+            العنوان: <a href="./index.html" dir="ltr">trace-css/playground</a>،
+            والمستخدم: <bdi>Alex_42</bdi>.
+          </p>
+        </section>
+      </div>
+      <div data-mode="dark" aria-label="Dark theme">
+        <h3>Classless</h3>
+        <a href="./index.html">Back to home</a>
+        <p>A link <a href="./button.html">within text</a> remains readable.</p>
+        <a href="#destination-dark">Jump to anchor ↓</a>
+
+        <p id="destination-dark">Link target. Use Tab to check focus.</p>
+
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3 lang="en">Classless</h3>
+          <a href="./index.html">العودة إلى الصفحة الرئيسية</a>
+          <p>
+            يبقى <a href="./button.html">الرابط داخل النص</a> واضحًا وسهل
+            القراءة.
+          </p>
+          <a href="#destination-ar-dark">الانتقال إلى الموضع المطلوب ↓</a>
+          <p id="destination-ar-dark">
+            هذا هو موضع الرابط. استخدم مفتاح <bdi>Tab</bdi> للتحقق من التركيز.
+          </p>
+          <p>
+            العنوان: <a href="./index.html" dir="ltr">trace-css/playground</a>،
+            والمستخدم: <bdi>Alex_42</bdi>.
+          </p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Tables</title>
+    <script src="./playground.js"></script>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a>
+      <a href="./all.html">All components</a>
+    </header>
+    <main data-theme-preview>
+      <div data-mode="light" aria-label="Light theme">
+        <h3>Classless</h3>
+        <div data-table-example>
+          <table>
+            <caption>
+              Sample component inventory
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Component</th>
+                <th scope="col">Category</th>
+                <th scope="col">Status</th>
+                <th scope="col">Owner</th>
+                <th scope="col">Variants</th>
+                <th scope="col">Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Button</th>
+                <td>Elements</td>
+                <td>Ready</td>
+                <td>Alex</td>
+                <td>18</td>
+                <td>2026-10-28</td>
+              </tr>
+              <tr>
+                <th scope="row">Input</th>
+                <td>Forms</td>
+                <td>In review</td>
+                <td>Sam</td>
+                <td>12</td>
+                <td>2026-10-29</td>
+              </tr>
+              <tr>
+                <th scope="row">Select</th>
+                <td>Forms</td>
+                <td>Ready</td>
+                <td>Jordan</td>
+                <td>6</td>
+                <td>2026-10-27</td>
+              </tr>
+              <tr>
+                <th scope="row">Typography</th>
+                <td>Content</td>
+                <td>Ready</td>
+                <td>Taylor</td>
+                <td>27</td>
+                <td>2026-10-30</td>
+              </tr>
+              <tr>
+                <th scope="row">Table</th>
+                <td>Content</td>
+                <td>Draft</td>
+                <td>Morgan</td>
+                <td>9</td>
+                <td>2026-10-26</td>
+              </tr>
+              <tr>
+                <th scope="row">File upload</th>
+                <td>Forms</td>
+                <td>Planned</td>
+                <td>Casey</td>
+                <td>0</td>
+                <td>2026-10-25</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Extensions</h3>
+        <div class="trace-table-wrap">
+          <table class="trace-striped trace-hover trace-compact">
+            <caption>
+              Sample orders · USD
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Order</th>
+                <th scope="col">Item</th>
+                <th scope="col">Status</th>
+                <th scope="col" class="trace-numeric">Quantity</th>
+                <th scope="col" class="trace-numeric">Unit price</th>
+                <th scope="col" class="trace-numeric">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">ORD-1042</th>
+                <td>Starter subscription</td>
+                <td>Paid</td>
+                <td class="trace-numeric">1</td>
+                <td class="trace-numeric">19.00</td>
+                <td class="trace-numeric">19.00</td>
+              </tr>
+              <tr>
+                <th scope="row">ORD-1043</th>
+                <td>Team workspace — monthly plan</td>
+                <td>Pending</td>
+                <td class="trace-numeric">3</td>
+                <td class="trace-numeric">49.00</td>
+                <td class="trace-numeric">147.00</td>
+              </tr>
+              <tr>
+                <th scope="row">ORD-1044</th>
+                <td>Additional storage, 100 GB</td>
+                <td>Paid</td>
+                <td class="trace-numeric">2</td>
+                <td class="trace-numeric">8.50</td>
+                <td class="trace-numeric">17.00</td>
+              </tr>
+              <tr>
+                <th scope="row">ORD-1045</th>
+                <td>Annual business subscription</td>
+                <td>Processing</td>
+                <td class="trace-numeric">1</td>
+                <td class="trace-numeric">1,299.00</td>
+                <td class="trace-numeric">1,299.00</td>
+              </tr>
+              <tr>
+                <th scope="row">ORD-1046</th>
+                <td>Design review session</td>
+                <td>Refunded</td>
+                <td class="trace-numeric">1</td>
+                <td class="trace-numeric">75.00</td>
+                <td class="trace-numeric">−75.00</td>
+              </tr>
+              <tr>
+                <th scope="row">ORD-1047</th>
+                <td>Sandbox environment</td>
+                <td>Trial</td>
+                <td class="trace-numeric">1</td>
+                <td class="trace-numeric">0.00</td>
+                <td class="trace-numeric">0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <div data-table-example>
+            <table>
+              <caption>
+                قائمة المكونات التجريبية
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">المكون</th>
+                  <th scope="col">الفئة</th>
+                  <th scope="col">الحالة</th>
+                  <th scope="col">المسؤول</th>
+                  <th scope="col">الخيارات</th>
+                  <th scope="col">آخر تحديث</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">زر</th>
+                  <td>عناصر</td>
+                  <td>جاهز</td>
+                  <td>أحمد</td>
+                  <td><bdi dir="ltr">18</bdi></td>
+                  <td><bdi dir="ltr">2026-10-28</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row">حقل إدخال</th>
+                  <td>نماذج</td>
+                  <td>قيد المراجعة</td>
+                  <td>سارة</td>
+                  <td><bdi dir="ltr">12</bdi></td>
+                  <td><bdi dir="ltr">2026-10-29</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row">قائمة اختيار</th>
+                  <td>نماذج</td>
+                  <td>جاهز</td>
+                  <td>عمر</td>
+                  <td><bdi dir="ltr">6</bdi></td>
+                  <td><bdi dir="ltr">2026-10-27</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row">الطباعة</th>
+                  <td>محتوى</td>
+                  <td>جاهز</td>
+                  <td>ليلى</td>
+                  <td><bdi dir="ltr">27</bdi></td>
+                  <td><bdi dir="ltr">2026-10-30</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row">جدول</th>
+                  <td>محتوى</td>
+                  <td>مسودة</td>
+                  <td>مريم</td>
+                  <td><bdi dir="ltr">9</bdi></td>
+                  <td><bdi dir="ltr">2026-10-26</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row">رفع الملفات</th>
+                  <td>نماذج</td>
+                  <td>مخطط</td>
+                  <td>يوسف</td>
+                  <td><bdi dir="ltr">0</bdi></td>
+                  <td><bdi dir="ltr">2026-10-25</bdi></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>امتدادات</h3>
+          <div class="trace-table-wrap">
+            <table class="trace-striped trace-hover trace-compact">
+              <caption>
+                طلبات تجريبية · دولار أمريكي
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">الطلب</th>
+                  <th scope="col">العنصر</th>
+                  <th scope="col">الحالة</th>
+                  <th scope="col" class="trace-numeric">الكمية</th>
+                  <th scope="col" class="trace-numeric">سعر الوحدة</th>
+                  <th scope="col" class="trace-numeric">الإجمالي</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><bdi dir="ltr">ORD-1042</bdi></th>
+                  <td>الاشتراك الأساسي</td>
+                  <td>مدفوع</td>
+                  <td class="trace-numeric"><bdi dir="ltr">1</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">19.00</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">19.00</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row"><bdi dir="ltr">ORD-1043</bdi></th>
+                  <td>مساحة عمل الفريق — اشتراك شهري</td>
+                  <td>معلق</td>
+                  <td class="trace-numeric"><bdi dir="ltr">3</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">49.00</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">147.00</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row"><bdi dir="ltr">ORD-1044</bdi></th>
+                  <td>مساحة تخزين إضافية، ١٠٠ غيغابايت</td>
+                  <td>مدفوع</td>
+                  <td class="trace-numeric"><bdi dir="ltr">2</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">8.50</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">17.00</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row"><bdi dir="ltr">ORD-1045</bdi></th>
+                  <td>اشتراك الأعمال السنوي</td>
+                  <td>قيد المعالجة</td>
+                  <td class="trace-numeric"><bdi dir="ltr">1</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">1,299.00</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">1,299.00</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row"><bdi dir="ltr">ORD-1046</bdi></th>
+                  <td>جلسة مراجعة التصميم</td>
+                  <td>مسترد</td>
+                  <td class="trace-numeric"><bdi dir="ltr">1</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">75.00</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">−75.00</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row"><bdi dir="ltr">ORD-1047</bdi></th>
+                  <td>بيئة تجريبية</td>
+                  <td>تجريبي</td>
+                  <td class="trace-numeric"><bdi dir="ltr">1</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">0.00</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">0.00</bdi></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+      <div data-mode="dark" aria-label="Dark theme">
+        <h3>Classless</h3>
+        <div data-table-example>
+          <table>
+            <caption>
+              Sample component inventory
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Component</th>
+                <th scope="col">Category</th>
+                <th scope="col">Status</th>
+                <th scope="col">Owner</th>
+                <th scope="col">Variants</th>
+                <th scope="col">Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Button</th>
+                <td>Elements</td>
+                <td>Ready</td>
+                <td>Alex</td>
+                <td>18</td>
+                <td>2026-10-28</td>
+              </tr>
+              <tr>
+                <th scope="row">Input</th>
+                <td>Forms</td>
+                <td>In review</td>
+                <td>Sam</td>
+                <td>12</td>
+                <td>2026-10-29</td>
+              </tr>
+              <tr>
+                <th scope="row">Select</th>
+                <td>Forms</td>
+                <td>Ready</td>
+                <td>Jordan</td>
+                <td>6</td>
+                <td>2026-10-27</td>
+              </tr>
+              <tr>
+                <th scope="row">Typography</th>
+                <td>Content</td>
+                <td>Ready</td>
+                <td>Taylor</td>
+                <td>27</td>
+                <td>2026-10-30</td>
+              </tr>
+              <tr>
+                <th scope="row">Table</th>
+                <td>Content</td>
+                <td>Draft</td>
+                <td>Morgan</td>
+                <td>9</td>
+                <td>2026-10-26</td>
+              </tr>
+              <tr>
+                <th scope="row">File upload</th>
+                <td>Forms</td>
+                <td>Planned</td>
+                <td>Casey</td>
+                <td>0</td>
+                <td>2026-10-25</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Extensions</h3>
+        <div class="trace-table-wrap">
+          <table class="trace-striped trace-hover trace-compact">
+            <caption>
+              Sample orders · USD
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Order</th>
+                <th scope="col">Item</th>
+                <th scope="col">Status</th>
+                <th scope="col" class="trace-numeric">Quantity</th>
+                <th scope="col" class="trace-numeric">Unit price</th>
+                <th scope="col" class="trace-numeric">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">ORD-1042</th>
+                <td>Starter subscription</td>
+                <td>Paid</td>
+                <td class="trace-numeric">1</td>
+                <td class="trace-numeric">19.00</td>
+                <td class="trace-numeric">19.00</td>
+              </tr>
+              <tr>
+                <th scope="row">ORD-1043</th>
+                <td>Team workspace — monthly plan</td>
+                <td>Pending</td>
+                <td class="trace-numeric">3</td>
+                <td class="trace-numeric">49.00</td>
+                <td class="trace-numeric">147.00</td>
+              </tr>
+              <tr>
+                <th scope="row">ORD-1044</th>
+                <td>Additional storage, 100 GB</td>
+                <td>Paid</td>
+                <td class="trace-numeric">2</td>
+                <td class="trace-numeric">8.50</td>
+                <td class="trace-numeric">17.00</td>
+              </tr>
+              <tr>
+                <th scope="row">ORD-1045</th>
+                <td>Annual business subscription</td>
+                <td>Processing</td>
+                <td class="trace-numeric">1</td>
+                <td class="trace-numeric">1,299.00</td>
+                <td class="trace-numeric">1,299.00</td>
+              </tr>
+              <tr>
+                <th scope="row">ORD-1046</th>
+                <td>Design review session</td>
+                <td>Refunded</td>
+                <td class="trace-numeric">1</td>
+                <td class="trace-numeric">75.00</td>
+                <td class="trace-numeric">−75.00</td>
+              </tr>
+              <tr>
+                <th scope="row">ORD-1047</th>
+                <td>Sandbox environment</td>
+                <td>Trial</td>
+                <td class="trace-numeric">1</td>
+                <td class="trace-numeric">0.00</td>
+                <td class="trace-numeric">0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <div data-table-example>
+            <table>
+              <caption>
+                قائمة المكونات التجريبية
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">المكون</th>
+                  <th scope="col">الفئة</th>
+                  <th scope="col">الحالة</th>
+                  <th scope="col">المسؤول</th>
+                  <th scope="col">الخيارات</th>
+                  <th scope="col">آخر تحديث</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">زر</th>
+                  <td>عناصر</td>
+                  <td>جاهز</td>
+                  <td>أحمد</td>
+                  <td><bdi dir="ltr">18</bdi></td>
+                  <td><bdi dir="ltr">2026-10-28</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row">حقل إدخال</th>
+                  <td>نماذج</td>
+                  <td>قيد المراجعة</td>
+                  <td>سارة</td>
+                  <td><bdi dir="ltr">12</bdi></td>
+                  <td><bdi dir="ltr">2026-10-29</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row">قائمة اختيار</th>
+                  <td>نماذج</td>
+                  <td>جاهز</td>
+                  <td>عمر</td>
+                  <td><bdi dir="ltr">6</bdi></td>
+                  <td><bdi dir="ltr">2026-10-27</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row">الطباعة</th>
+                  <td>محتوى</td>
+                  <td>جاهز</td>
+                  <td>ليلى</td>
+                  <td><bdi dir="ltr">27</bdi></td>
+                  <td><bdi dir="ltr">2026-10-30</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row">جدول</th>
+                  <td>محتوى</td>
+                  <td>مسودة</td>
+                  <td>مريم</td>
+                  <td><bdi dir="ltr">9</bdi></td>
+                  <td><bdi dir="ltr">2026-10-26</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row">رفع الملفات</th>
+                  <td>نماذج</td>
+                  <td>مخطط</td>
+                  <td>يوسف</td>
+                  <td><bdi dir="ltr">0</bdi></td>
+                  <td><bdi dir="ltr">2026-10-25</bdi></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>امتدادات</h3>
+          <div class="trace-table-wrap">
+            <table class="trace-striped trace-hover trace-compact">
+              <caption>
+                طلبات تجريبية · دولار أمريكي
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">الطلب</th>
+                  <th scope="col">العنصر</th>
+                  <th scope="col">الحالة</th>
+                  <th scope="col" class="trace-numeric">الكمية</th>
+                  <th scope="col" class="trace-numeric">سعر الوحدة</th>
+                  <th scope="col" class="trace-numeric">الإجمالي</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><bdi dir="ltr">ORD-1042</bdi></th>
+                  <td>الاشتراك الأساسي</td>
+                  <td>مدفوع</td>
+                  <td class="trace-numeric"><bdi dir="ltr">1</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">19.00</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">19.00</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row"><bdi dir="ltr">ORD-1043</bdi></th>
+                  <td>مساحة عمل الفريق — اشتراك شهري</td>
+                  <td>معلق</td>
+                  <td class="trace-numeric"><bdi dir="ltr">3</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">49.00</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">147.00</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row"><bdi dir="ltr">ORD-1044</bdi></th>
+                  <td>مساحة تخزين إضافية، ١٠٠ غيغابايت</td>
+                  <td>مدفوع</td>
+                  <td class="trace-numeric"><bdi dir="ltr">2</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">8.50</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">17.00</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row"><bdi dir="ltr">ORD-1045</bdi></th>
+                  <td>اشتراك الأعمال السنوي</td>
+                  <td>قيد المعالجة</td>
+                  <td class="trace-numeric"><bdi dir="ltr">1</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">1,299.00</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">1,299.00</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row"><bdi dir="ltr">ORD-1046</bdi></th>
+                  <td>جلسة مراجعة التصميم</td>
+                  <td>مسترد</td>
+                  <td class="trace-numeric"><bdi dir="ltr">1</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">75.00</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">−75.00</bdi></td>
+                </tr>
+                <tr>
+                  <th scope="row"><bdi dir="ltr">ORD-1047</bdi></th>
+                  <td>بيئة تجريبية</td>
+                  <td>تجريبي</td>
+                  <td class="trace-numeric"><bdi dir="ltr">1</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">0.00</bdi></td>
+                  <td class="trace-numeric"><bdi dir="ltr">0.00</bdi></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

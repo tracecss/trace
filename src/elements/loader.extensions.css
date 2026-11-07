@@ -1,0 +1,27 @@
+@layer trace.extensions {
+  :where(.trace-loader) {
+    display: inline-grid;
+    place-items: center;
+    inline-size: var(--trace-loader-size, 1em);
+    block-size: var(--trace-loader-size, 1em);
+    flex-shrink: 0;
+    vertical-align: middle;
+  }
+
+  :where(.trace-loader)::before {
+    content: "";
+    inline-size: 100%;
+    block-size: 100%;
+    border-radius: var(--trace-loader-radius, 2px);
+    background-color: var(--trace-loader-color, var(--trace-primary));
+    animation: trace-square-rotate var(--trace-loader-duration, 3s) ease-in-out
+      infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :where(.trace-loader)::before {
+      animation: none;
+      transform: none;
+    }
+  }
+}

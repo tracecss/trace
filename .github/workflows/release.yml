@@ -1,0 +1,51 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24.14.0
+          registry-url: https://registry.npmjs.org
+      - run: pnpm install --frozen-lockfile
+      - name: Set repository metadata for provenance
+        env:
+          REPOSITORY: ${{ github.repository }}
+        run: npm pkg set "repository.type=git" "repository.url=git+https://github.com/${REPOSITORY}.git" "homepage=https://github.com/${REPOSITORY}#readme" "bugs.url=https://github.com/${REPOSITORY}/issues"
+      - run: pnpm check
+      - run: pnpm build
+      - run: pnpm check:package
+      - name: Pack verified files
+        run: npm pack --ignore-scripts
+      - name: Publish to npm using OIDC
+        run: |
+          VERSION=$(node --input-type=module -e 'import p from "./package.json" with { type: "json" }; console.log(p.version)')
+          if [[ "$VERSION" == *-* ]]; then
+            npm publish "trace-css-${VERSION}.tgz" --tag next
+          else
+            npm publish "trace-css-${VERSION}.tgz" --tag latest
+          fi
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          FLAGS=()
+          if [[ "$GITHUB_REF_NAME" == *-* ]]; then FLAGS+=(--prerelease); fi
+          gh release create "$GITHUB_REF_NAME" dist/*.css trace-css-*.tgz --verify-tag --generate-notes "${FLAGS[@]}"

@@ -1,0 +1,146 @@
+@layer trace.elements {
+  :where(:root) {
+    --trace-checkbox-size: 1.25rem;
+    --trace-checkbox-radius: var(--trace-radius-control);
+    --trace-checkbox-color: light-dark(
+      var(--trace-primary),
+      var(--trace-secondary)
+    );
+    --trace-checkbox-mark: light-dark(
+      var(--trace-neutral-lighter),
+      var(--trace-primary-dark)
+    );
+  }
+
+  :where(input[type="checkbox"]:not([role="switch"])) {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    isolation: isolate;
+    display: inline-block;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    inline-size: var(--trace-checkbox-size);
+    block-size: var(--trace-checkbox-size);
+    margin: 2px;
+    padding: 0;
+    border: 2px solid var(--trace-checkbox-color);
+    border-radius: var(--trace-checkbox-radius);
+    background-color: var(--trace-checkbox-bg, var(--trace-control-bg));
+    vertical-align: middle;
+    cursor: pointer;
+    transition:
+      transform 200ms ease-in-out,
+      border-color 200ms ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 10%;
+      z-index: 1;
+      background: var(--trace-checkbox-mark);
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m5 12 4 4 10-10' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+        center / contain no-repeat;
+      opacity: 0;
+      transform: scale(0.6);
+      transition:
+        opacity 180ms ease-in-out,
+        transform 180ms ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      border-radius: max(0px, calc(var(--trace-checkbox-radius) - 2px));
+      background-color: var(--trace-checkbox-color);
+      opacity: 0;
+      transform: scale(0.6);
+      transition:
+        opacity 180ms ease-in-out,
+        transform 180ms ease-in-out;
+    }
+
+    &:checked::after,
+    &:indeterminate::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &:checked::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &:indeterminate::before {
+      opacity: 1;
+      transform: scale(1);
+      inset: 0;
+      margin: auto;
+      inline-size: 60%;
+      block-size: 2px;
+      border-radius: 1px;
+      mask: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--trace-checkbox-color);
+      outline-offset: 2px;
+    }
+
+    &:active:not(:disabled) {
+      transform: scale(0.9);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &[aria-invalid="true"] {
+      --trace-checkbox-color: var(--trace-danger);
+      --trace-checkbox-mark: var(--trace-neutral-lighter);
+    }
+
+    &:user-invalid {
+      --trace-checkbox-color: var(--trace-danger);
+      --trace-checkbox-mark: var(--trace-neutral-lighter);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+      transform: none;
+
+      &::before,
+      &::after {
+        transition: none;
+        transform: none;
+      }
+    }
+
+    @media (forced-colors: active) {
+      appearance: auto;
+      -webkit-appearance: auto;
+      background: none;
+
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  :where(label:has(> input[type="checkbox"]:not([role="switch"]))) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--trace-text);
+    cursor: pointer;
+
+    &:has(> input:disabled) {
+      color: color-mix(in srgb, var(--trace-text), transparent 50%);
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,171 @@
+@layer trace.extensions {
+  :where(label:has(> .trace-input-wrap > input)) {
+    display: grid;
+    gap: 0.25rem;
+    min-inline-size: 0;
+    color: var(--trace-input-text);
+    cursor: pointer;
+    & > small {
+      margin: 0;
+      line-height: 1.5;
+    }
+    &:has(> .trace-input-wrap > input:disabled) {
+      color: color-mix(in srgb, var(--trace-input-text), transparent 50%);
+      cursor: not-allowed;
+    }
+    &:has(
+        > .trace-input-wrap > input[aria-invalid="true"],
+        > .trace-input-wrap > input:user-invalid
+      )
+      > small:last-child {
+      color: var(--trace-input-error);
+    }
+  }
+
+  :where(.trace-input-wrap) {
+    --trace-input-icon-size: 1.25rem;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    position: relative;
+    min-inline-size: 0;
+  }
+
+  :where(.trace-input-wrap > input) {
+    grid-area: 1 / 1 / 2 / 4;
+  }
+  :where(
+    .trace-input-wrap > .trace-input-icon-start,
+    .trace-input-wrap > .trace-input-icon-end
+  ) {
+    --trace-icon-size: var(--trace-input-icon-size);
+    position: relative;
+    grid-row: 1;
+    align-self: center;
+    margin-inline: calc(2px + var(--trace-input-padding-inline));
+    color: var(--trace-input-border);
+    pointer-events: none;
+  }
+
+  :where(.trace-input-wrap > .trace-input-icon-start) {
+    grid-column: 1;
+  }
+
+  :where(.trace-input-wrap > .trace-input-icon-end) {
+    grid-column: 3;
+  }
+
+  :where(.trace-input-wrap:has(> .trace-input-icon-start) > input) {
+    padding-inline-start: calc(
+      var(--trace-input-padding-inline) + var(--trace-input-icon-size) + 0.5rem
+    );
+  }
+
+  :where(.trace-input-wrap:has(> .trace-input-icon-end) > input) {
+    padding-inline-end: calc(
+      var(--trace-input-padding-inline) + var(--trace-input-icon-size) + 0.5rem
+    );
+  }
+
+  :where(.trace-input-wrap:has(> input:focus) > .trace-icon) {
+    color: var(--trace-input-focus);
+  }
+
+  :where(
+    .trace-input-wrap:has(> input[aria-invalid="true"], > input:user-invalid)
+      > .trace-icon
+  ) {
+    color: var(--trace-input-error);
+  }
+
+  :where(.trace-input-wrap:has(> input:disabled) > .trace-icon) {
+    opacity: 0.5;
+  }
+
+  :where(.trace-input-wrap:has(> button) > input) {
+    padding-inline-end: calc(var(--trace-input-padding-inline) + 2rem);
+  }
+
+  :where(.trace-input-wrap > button) {
+    position: absolute;
+    inset-inline-end: 0.5rem;
+    inset-block: 0;
+    margin-block: auto;
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    padding: 0;
+    border: 0;
+    border-radius: var(--trace-radius-sm);
+    background: transparent;
+    color: var(--trace-input-border);
+    box-shadow: none;
+    --trace-button-outline-color: var(--trace-input-focus);
+  }
+
+  :where(.trace-input-wrap > button:hover:not(:disabled)) {
+    color: var(--trace-input-focus);
+    box-shadow: none;
+  }
+
+  :where(.trace-input-wrap > button:active:not(:disabled)) {
+    transform: scale(0.9);
+    box-shadow: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :where(.trace-input-wrap > button) {
+      transition: none;
+      transform: none;
+    }
+  }
+
+  :where(.trace-input-wrap > button > .trace-icon) {
+    --trace-icon-size: 1.25rem;
+  }
+  :where(.trace-input-wrap:has(> input.trace-small)) {
+    --trace-input-padding-inline: 0.5rem;
+    --trace-input-icon-size: 1rem;
+  }
+
+  :where(.trace-input-wrap:has(> input.trace-large)) {
+    --trace-input-padding-inline: 0.75rem;
+    --trace-input-icon-size: 1.5rem;
+  }
+
+  :where(input.trace-small:not([type="checkbox"]):not([type="radio"])) {
+    --trace-input-font-size: 0.875rem;
+    --trace-input-line-height: 1.25rem;
+    --trace-input-padding-block: 0.25rem;
+    --trace-input-padding-inline: 0.5rem;
+  }
+
+  :where(input.trace-large:not([type="checkbox"]):not([type="radio"])) {
+    --trace-input-font-size: 1.125rem;
+    --trace-input-line-height: 1.75rem;
+    --trace-input-padding-block: 0.5rem;
+    --trace-input-padding-inline: 0.75rem;
+  }
+
+  /* Keep loading states above the embedded button's layout and interactions. */
+  :where(.trace-input-wrap > button[aria-busy="true"]) {
+    position: absolute;
+    cursor: wait;
+    opacity: 1;
+    box-shadow: none;
+    transform: none;
+  }
+
+  :where(
+    .trace-input-wrap > button[aria-busy="true"]:not(:has(> span.trace-icon))
+  ) {
+    color: transparent;
+  }
+
+  @media (forced-colors: active) {
+    :where(
+      .trace-input-wrap > button[aria-busy="true"]:not(:has(> span.trace-icon))
+    ) {
+      background-color: ButtonFace;
+      border-color: ButtonText;
+    }
+  }
+}

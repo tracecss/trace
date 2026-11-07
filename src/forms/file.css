@@ -1,0 +1,39 @@
+@layer trace.elements {
+  :where(:root) {
+    --trace-file-button-bg: var(--trace-primary-light);
+    --trace-file-button-text: var(--trace-secondary-lighter);
+  }
+
+  :where(input[type="file"]) {
+    padding-block: 0;
+    padding-inline-start: 0;
+    cursor: pointer;
+  }
+
+  :where(input[type="file"])::file-selector-button {
+    margin: 0;
+    margin-inline-end: var(--trace-input-padding-inline);
+    padding: var(--trace-input-padding-block) var(--trace-input-padding-inline);
+    border: 0;
+    border-radius: 0;
+    background: var(--trace-file-button-bg);
+    color: var(--trace-file-button-text);
+    font: inherit;
+    line-height: inherit;
+    cursor: pointer;
+  }
+
+  :where(input[type="file"]:hover:not(:disabled):not([readonly]):not(:focus)) {
+    box-shadow: none;
+  }
+
+  :where(input[type="file"]:disabled)::file-selector-button {
+    cursor: not-allowed;
+  }
+
+  @media (forced-colors: active) {
+    :where(input[type="file"])::file-selector-button {
+      border-inline-end: 1px solid ButtonText;
+    }
+  }
+}

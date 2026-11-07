@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Select</title>
+    <script src="./playground.js"></script>
+    <link rel="stylesheet" href="../src/index.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">Home</a>
+      <a href="./all.html">All components</a>
+    </header>
+    <main data-theme-preview>
+      <div data-mode="light" aria-label="Light theme">
+        <h3>Classless</h3>
+        <div data-form-examples>
+          <label
+            >Native select<select>
+              <option value="">Select a city</option>
+              <option>Chisinau</option>
+              <option>Bucharest</option>
+              <option>Kyiv</option>
+            </select></label
+          ><label
+            >Invalid<select aria-invalid="true">
+              <option value="">Select a city</option>
+              <option>Chisinau</option>
+              <option>Bucharest</option>
+              <option>Kyiv</option></select
+            ><small>Select a value.</small></label
+          ><label
+            >Disabled<select disabled>
+              <option value="">Select a city</option>
+              <option>Chisinau</option>
+              <option>Bucharest</option>
+              <option>Kyiv</option>
+            </select></label
+          ><label
+            >Multiple selection<select multiple size="3">
+              <option value="">Select a city</option>
+              <option>Chisinau</option>
+              <option>Bucharest</option>
+              <option>Kyiv</option>
+            </select></label
+          >
+        </div>
+        <h3>Extensions</h3>
+        <div data-form-examples>
+          <label
+            >With wrapper
+            <div class="trace-select">
+              <select>
+                <option value="">Select a city</option>
+                <option>Chisinau</option>
+                <option>Bucharest</option>
+                <option>Kyiv</option>
+              </select>
+            </div></label
+          ><label
+            >Small<select class="trace-small">
+              <option value="">Select a city</option>
+              <option>Chisinau</option>
+              <option>Bucharest</option>
+              <option>Kyiv</option>
+            </select></label
+          ><label
+            >Large<select class="trace-large">
+              <option value="">Select a city</option>
+              <option>Chisinau</option>
+              <option>Bucharest</option>
+              <option>Kyiv</option>
+            </select></label
+          >
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <div data-form-examples>
+            <label
+              >قائمة اختيار أصلية<select>
+                <option value="">اختر مدينة</option>
+                <option>كيشيناو</option>
+                <option>بوخارست</option>
+                <option>كييف</option>
+              </select></label
+            ><label
+              >غير صالح<select aria-invalid="true">
+                <option value="">اختر مدينة</option>
+                <option>كيشيناو</option>
+                <option>بوخارست</option>
+                <option>كييف</option></select
+              ><small>اختر قيمة.</small></label
+            ><label
+              >غير متاح<select disabled>
+                <option value="">اختر مدينة</option>
+                <option>كيشيناو</option>
+                <option>بوخارست</option>
+                <option>كييف</option>
+              </select></label
+            ><label
+              >اختيار متعدد<select multiple size="3">
+                <option value="">اختر مدينة</option>
+                <option>كيشيناو</option>
+                <option>بوخارست</option>
+                <option>كييف</option>
+              </select></label
+            >
+          </div>
+          <h3>امتدادات</h3>
+          <div data-form-examples>
+            <label
+              >مع حاوية
+              <div class="trace-select">
+                <select>
+                  <option value="">اختر مدينة</option>
+                  <option>كيشيناو</option>
+                  <option>بوخارست</option>
+                  <option>كييف</option>
+                </select>
+              </div></label
+            ><label
+              >صغير<select class="trace-small">
+                <option value="">اختر مدينة</option>
+                <option>كيشيناو</option>
+                <option>بوخارست</option>
+                <option>كييف</option>
+              </select></label
+            ><label
+              >كبير<select class="trace-large">
+                <option value="">اختر مدينة</option>
+                <option>كيشيناو</option>
+                <option>بوخارست</option>
+                <option>كييف</option>
+              </select></label
+            >
+          </div>
+        </section>
+      </div>
+      <div data-mode="dark" aria-label="Dark theme">
+        <h3>Classless</h3>
+        <div data-form-examples>
+          <label
+            >Native select<select>
+              <option value="">Select a city</option>
+              <option>Chisinau</option>
+              <option>Bucharest</option>
+              <option>Kyiv</option>
+            </select></label
+          ><label
+            >Invalid<select aria-invalid="true">
+              <option value="">Select a city</option>
+              <option>Chisinau</option>
+              <option>Bucharest</option>
+              <option>Kyiv</option></select
+            ><small>Select a value.</small></label
+          ><label
+            >Disabled<select disabled>
+              <option value="">Select a city</option>
+              <option>Chisinau</option>
+              <option>Bucharest</option>
+              <option>Kyiv</option>
+            </select></label
+          ><label
+            >Multiple selection<select multiple size="3">
+              <option value="">Select a city</option>
+              <option>Chisinau</option>
+              <option>Bucharest</option>
+              <option>Kyiv</option>
+            </select></label
+          >
+        </div>
+        <h3>Extensions</h3>
+        <div data-form-examples>
+          <label
+            >With wrapper
+            <div class="trace-select">
+              <select>
+                <option value="">Select a city</option>
+                <option>Chisinau</option>
+                <option>Bucharest</option>
+                <option>Kyiv</option>
+              </select>
+            </div></label
+          ><label
+            >Small<select class="trace-small">
+              <option value="">Select a city</option>
+              <option>Chisinau</option>
+              <option>Bucharest</option>
+              <option>Kyiv</option>
+            </select></label
+          ><label
+            >Large<select class="trace-large">
+              <option value="">Select a city</option>
+              <option>Chisinau</option>
+              <option>Bucharest</option>
+              <option>Kyiv</option>
+            </select></label
+          >
+        </div>
+        <h3>Arabic / RTL</h3>
+        <section lang="ar" dir="rtl" aria-label="أمثلة باللغة العربية">
+          <h3>دون أصناف</h3>
+          <div data-form-examples>
+            <label
+              >قائمة اختيار أصلية<select>
+                <option value="">اختر مدينة</option>
+                <option>كيشيناو</option>
+                <option>بوخارست</option>
+                <option>كييف</option>
+              </select></label
+            ><label
+              >غير صالح<select aria-invalid="true">
+                <option value="">اختر مدينة</option>
+                <option>كيشيناو</option>
+                <option>بوخارست</option>
+                <option>كييف</option></select
+              ><small>اختر قيمة.</small></label
+            ><label
+              >غير متاح<select disabled>
+                <option value="">اختر مدينة</option>
+                <option>كيشيناو</option>
+                <option>بوخارست</option>
+                <option>كييف</option>
+              </select></label
+            ><label
+              >اختيار متعدد<select multiple size="3">
+                <option value="">اختر مدينة</option>
+                <option>كيشيناو</option>
+                <option>بوخارست</option>
+                <option>كييف</option>
+              </select></label
+            >
+          </div>
+          <h3>امتدادات</h3>
+          <div data-form-examples>
+            <label
+              >مع حاوية
+              <div class="trace-select">
+                <select>
+                  <option value="">اختر مدينة</option>
+                  <option>كيشيناو</option>
+                  <option>بوخارست</option>
+                  <option>كييف</option>
+                </select>
+              </div></label
+            ><label
+              >صغير<select class="trace-small">
+                <option value="">اختر مدينة</option>
+                <option>كيشيناو</option>
+                <option>بوخارست</option>
+                <option>كييف</option>
+              </select></label
+            ><label
+              >كبير<select class="trace-large">
+                <option value="">اختر مدينة</option>
+                <option>كيشيناو</option>
+                <option>بوخارست</option>
+                <option>كييف</option>
+              </select></label
+            >
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

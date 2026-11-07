@@ -1,0 +1,45 @@
+@layer trace.extensions {
+  :where(table.trace-striped > tbody > tr:nth-child(odd) > :is(th, td)) {
+    background-color: var(--trace-table-stripe-bg);
+  }
+
+  :where(
+    table.trace-hover > tbody > tr:is(:hover, :focus-within) > :is(th, td)
+  ) {
+    background-color: var(--trace-table-hover-bg);
+  }
+
+  :where(table.trace-compact) {
+    --trace-table-padding-block: 0.375rem;
+    --trace-table-padding-inline: 0.625rem;
+    --trace-table-font-size: 0.875rem;
+  }
+
+  :where(
+    table > :is(thead, tbody, tfoot) > tr > .trace-numeric,
+    table > tr > .trace-numeric
+  ) {
+    text-align: end;
+    font-variant-numeric: tabular-nums;
+  }
+
+  :where(.trace-table-wrap) {
+    max-inline-size: 100%;
+    min-inline-size: 0;
+    overflow-x: auto;
+
+    &:focus-visible {
+      outline: 2px solid var(--trace-table-border);
+      outline-offset: 2px;
+    }
+  }
+
+  @media (forced-colors: active) {
+    :where(
+      table.trace-hover > tbody > tr:is(:hover, :focus-within) > :is(th, td)
+    ) {
+      outline: 1px solid Highlight;
+      outline-offset: -1px;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+@layer trace.elements {
+  :where(:root) {
+    --trace-textarea-font-size: 1rem;
+    --trace-textarea-line-height: 1.5rem;
+    --trace-textarea-padding-block: 0.375rem;
+    --trace-textarea-padding-inline: 0.625rem;
+    --trace-textarea-radius: var(--trace-radius-control);
+    --trace-textarea-text: var(--trace-text);
+    --trace-textarea-border: light-dark(
+      var(--trace-primary),
+      var(--trace-secondary)
+    );
+    --trace-textarea-focus: light-dark(
+      var(--trace-primary-light),
+      var(--trace-secondary-light)
+    );
+    --trace-textarea-placeholder: light-dark(
+      var(--trace-neutral),
+      var(--trace-neutral-light)
+    );
+    --trace-textarea-error: var(--trace-danger);
+    --trace-textarea-shadow: var(--trace-shadow);
+  }
+
+  :where(textarea) {
+    --_trace-textarea-border: var(--trace-textarea-border);
+    display: block;
+    box-sizing: border-box;
+    inline-size: 100%;
+    min-inline-size: 0;
+    margin: 0;
+    padding: var(--trace-textarea-padding-block)
+      var(--trace-textarea-padding-inline);
+    border: 2px solid var(--_trace-textarea-border);
+    border-radius: var(--trace-textarea-radius);
+    background: var(--trace-textarea-bg, var(--trace-control-bg));
+    color: var(--trace-textarea-text);
+    caret-color: var(--trace-textarea-focus);
+    font-family: var(--trace-font-body);
+    font-size: var(--trace-textarea-font-size);
+    line-height: var(--trace-textarea-line-height);
+    text-align: start;
+    resize: vertical;
+    cursor: text;
+    transition:
+      border-color 200ms ease-in-out,
+      box-shadow 200ms ease-in-out;
+
+    &::placeholder {
+      color: var(--trace-textarea-placeholder);
+      opacity: 1;
+    }
+
+    &:hover:not(:disabled):not([readonly]):not(:focus) {
+      box-shadow: var(--trace-textarea-shadow);
+    }
+
+    &:focus {
+      --_trace-textarea-border: var(--trace-textarea-focus);
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 4px
+        color-mix(in srgb, var(--trace-textarea-focus), transparent 70%);
+    }
+
+    &[aria-invalid="true"] {
+      --_trace-textarea-border: var(--trace-textarea-error);
+    }
+
+    &:user-invalid {
+      --_trace-textarea-border: var(--trace-textarea-error);
+    }
+
+    &[readonly] {
+      cursor: default;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+
+  :where(label:has(> textarea)) {
+    display: grid;
+    gap: 0.25rem;
+    min-inline-size: 0;
+
+    color: var(--trace-textarea-text);
+    cursor: pointer;
+
+    & > small {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    &:has(> textarea:disabled) {
+      color: color-mix(in srgb, var(--trace-textarea-text), transparent 50%);
+      cursor: not-allowed;
+    }
+
+    &:has(> textarea[aria-invalid="true"], > textarea:user-invalid)
+      > small:last-child {
+      color: var(--trace-textarea-error);
+    }
+  }
+
+  :where(label:has(> textarea) + small) {
+    display: block;
+    margin-block-start: 0.25rem;
+    line-height: 1.5;
+  }
+
+  :where(
+    label:has(> textarea[aria-invalid="true"], > textarea:user-invalid) + small
+  ) {
+    color: var(--trace-textarea-error);
+  }
+
+  :where(label[for]:has(+ textarea:disabled)) {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  :where(textarea[aria-invalid="true"] + small, textarea:user-invalid + small) {
+    color: var(--trace-textarea-error);
+  }
+}

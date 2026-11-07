@@ -1,0 +1,38 @@
+# dependencies (pnpm install)
+node_modules/
+.pnpm-store/
+
+# output
+out/
+dist/
+*.tgz
+
+# code coverage
+coverage/
+*.lcov
+
+# logs and Node.js diagnostic reports
+logs/
+*.log
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# local environment files; keep shareable examples
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# caches
+.eslintcache
+.stylelintcache
+.cache/
+*.tsbuildinfo
+
+# generated Husky internals; keep project hooks
+.husky/_/
+
+# IntelliJ based IDEs
+.idea/
+
+# Finder (macOS) folder config
+.DS_Store

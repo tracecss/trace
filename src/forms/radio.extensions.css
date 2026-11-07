@@ -1,0 +1,9 @@
+@layer trace.extensions {
+  :where(input[type="radio"].trace-small) {
+    --trace-radio-size: 1rem;
+  }
+
+  :where(input[type="radio"].trace-large) {
+    --trace-radio-size: 1.5rem;
+  }
+}

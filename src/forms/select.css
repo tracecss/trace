@@ -1,0 +1,160 @@
+@layer trace.elements {
+  :where(:root) {
+    --trace-select-font-size: 1rem;
+    --trace-select-line-height: 1.5rem;
+    --trace-select-padding-block: 0.375rem;
+    --trace-select-padding-inline: 0.625rem;
+    --trace-select-radius: var(--trace-radius-control);
+    --trace-select-text: var(--trace-text);
+    --trace-select-border: light-dark(
+      var(--trace-primary),
+      var(--trace-secondary)
+    );
+    --trace-select-focus: light-dark(
+      var(--trace-primary-light),
+      var(--trace-secondary-light)
+    );
+    --trace-select-error: var(--trace-danger);
+    --trace-select-shadow: var(--trace-shadow);
+    --trace-select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23646b79' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    --trace-select-arrow-offset: var(--trace-select-padding-inline);
+    --trace-select-arrow-size: 1.25em;
+  }
+
+  :where(select) {
+    --_trace-select-border: var(--trace-select-border);
+    display: block;
+    box-sizing: border-box;
+    inline-size: 100%;
+    min-inline-size: 0;
+    margin: 0;
+    padding: var(--trace-select-padding-block)
+      var(--trace-select-padding-inline);
+    border: 2px solid var(--_trace-select-border);
+    border-radius: var(--trace-select-radius);
+    background: var(--trace-select-bg, var(--trace-control-bg));
+    color: var(--trace-select-text);
+    font-family: var(--trace-font-body);
+    font-size: var(--trace-select-font-size);
+    line-height: var(--trace-select-line-height);
+    text-align: start;
+    appearance: auto;
+    cursor: pointer;
+    transition:
+      border-color 200ms ease-in-out,
+      box-shadow 200ms ease-in-out;
+
+    &:hover:not(:disabled):not(:focus) {
+      box-shadow: var(--trace-select-shadow);
+    }
+
+    &:focus {
+      --_trace-select-border: var(--trace-select-focus);
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 4px
+        color-mix(in srgb, var(--trace-select-focus), transparent 70%);
+    }
+
+    &[aria-invalid="true"] {
+      --_trace-select-border: var(--trace-select-error);
+    }
+
+    &:user-invalid {
+      --_trace-select-border: var(--trace-select-error);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+  :where(
+    select:not([multiple]):not([size]),
+    select:not([multiple])[size="0"],
+    select:not([multiple])[size="1"]
+  ) {
+    appearance: none;
+    padding-inline-end: calc(
+      var(--trace-select-arrow-offset) + var(--trace-select-arrow-size) +
+        var(--trace-select-padding-inline)
+    );
+    background-image: var(--trace-select-arrow);
+    background-repeat: no-repeat;
+    background-size: var(--trace-select-arrow-size)
+      var(--trace-select-arrow-size);
+    background-position: right var(--trace-select-arrow-offset) center;
+
+    &:dir(rtl) {
+      background-position: left var(--trace-select-arrow-offset) center;
+    }
+
+    @media (forced-colors: active) {
+      appearance: auto;
+      background-image: none;
+    }
+  }
+  :where(select option, select optgroup) {
+    background-color: var(--trace-select-bg, var(--trace-control-bg));
+    color: var(--trace-select-text);
+  }
+
+  :where(select[multiple], select[size]:not([size="1"])) {
+    cursor: default;
+  }
+
+  :where(label:has(> select)) {
+    display: grid;
+    gap: 0.25rem;
+    min-inline-size: 0;
+
+    color: var(--trace-select-text);
+    cursor: pointer;
+
+    & > small {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    &:has(> select:disabled) {
+      color: color-mix(in srgb, var(--trace-select-text), transparent 50%);
+      cursor: not-allowed;
+    }
+
+    &:has(> select[aria-invalid="true"]) > small:last-child {
+      color: var(--trace-select-error);
+    }
+
+    &:has(> select:user-invalid) > small:last-child {
+      color: var(--trace-select-error);
+    }
+  }
+
+  :where(label:has(> select) + small) {
+    display: block;
+    margin-block-start: 0.25rem;
+    line-height: 1.5;
+  }
+
+  :where(label:has(> select[aria-invalid="true"]) + small) {
+    color: var(--trace-select-error);
+  }
+
+  :where(label:has(> select:user-invalid) + small) {
+    color: var(--trace-select-error);
+  }
+
+  :where(label[for]:has(+ select:disabled)) {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  :where(select[aria-invalid="true"] + small, select:user-invalid + small) {
+    color: var(--trace-select-error);
+  }
+}

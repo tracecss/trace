@@ -1,0 +1,75 @@
+@layer trace.elements {
+  :where(:root) {
+    --trace-link-color: light-dark(
+      var(--trace-primary),
+      var(--trace-secondary)
+    );
+    --trace-link-hover: light-dark(
+      var(--trace-primary-light),
+      var(--trace-secondary-light)
+    );
+    --trace-link-active: light-dark(
+      var(--trace-primary-dark),
+      var(--trace-secondary-dark)
+    );
+    --trace-link-visited: var(--trace-link-color);
+    --trace-link-focus: var(--trace-link-color);
+    --trace-link-underline-offset: 0.2em;
+    --trace-link-underline-thickness: 0.08em;
+  }
+
+  :where(a[href]) {
+    color: var(--trace-link-color);
+    text-decoration-line: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: var(--trace-link-underline-thickness);
+    text-underline-offset: var(--trace-link-underline-offset);
+    text-decoration-skip-ink: auto;
+    border-radius: var(--trace-radius-sm);
+    transition: color 150ms ease-in-out;
+
+    &:visited {
+      color: var(--trace-link-visited);
+    }
+
+    &:hover {
+      color: var(--trace-link-hover);
+      text-decoration-thickness: calc(
+        var(--trace-link-underline-thickness) * 2
+      );
+    }
+
+    &:active {
+      color: var(--trace-link-active);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--trace-link-focus);
+      outline-offset: 3px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :where(a[href]) {
+      transition: none;
+    }
+  }
+
+  @media (forced-colors: active) {
+    :where(a[href]) {
+      color: LinkText;
+
+      &:visited {
+        color: VisitedText;
+      }
+
+      &:active {
+        color: ActiveText;
+      }
+
+      &:focus-visible {
+        outline-color: Highlight;
+      }
+    }
+  }
+}

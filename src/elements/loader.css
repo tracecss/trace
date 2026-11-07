@@ -1,0 +1,73 @@
+@layer trace.elements {
+  @keyframes trace-square-rotate {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+      transform: rotateX(180deg) rotateY(0deg);
+    }
+    50% {
+      transform: rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+      transform: rotateX(0deg) rotateY(180deg);
+    }
+    100% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+  }
+
+  :where(
+    div,
+    section,
+    article,
+    main,
+    aside,
+    nav,
+    header,
+    footer,
+    form,
+    fieldset,
+    figure
+  ):where([aria-busy="true"]) {
+    position: relative;
+    isolation: isolate;
+    cursor: wait;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      border-radius: inherit;
+      background: var(
+        --trace-loader-overlay,
+        color-mix(in srgb, var(--trace-bg), transparent 30%)
+      );
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      margin: auto;
+      inline-size: var(--trace-loader-size, 2rem);
+      block-size: var(--trace-loader-size, 2rem);
+      border-radius: var(--trace-loader-radius, 2px);
+      background-color: var(
+        --trace-loader-color,
+        light-dark(var(--trace-primary), var(--trace-secondary))
+      );
+      animation: trace-square-rotate var(--trace-loader-duration, 3s)
+        ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      &::after {
+        animation: none;
+      }
+    }
+  }
+}

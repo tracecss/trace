@@ -1,0 +1,171 @@
+@layer trace.extensions {
+  :where(button > .trace-icon) {
+    --trace-icon-size: var(--trace-button-line-height);
+  }
+
+  :where(button[aria-busy="true"] > span.trace-icon) {
+    position: relative;
+  }
+
+  :where(button[aria-busy="true"] > span.trace-icon > *) {
+    opacity: 0;
+  }
+
+  :where(button[aria-busy="true"] > span.trace-icon)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    inline-size: var(--trace-loader-size, 1em);
+    block-size: var(--trace-loader-size, 1em);
+    border-radius: var(--trace-loader-radius, 2px);
+    background-color: var(
+      --trace-button-loader-color,
+      var(--trace-button-text, var(--trace-button-contrast))
+    );
+    animation: trace-square-rotate var(--trace-loader-duration, 3s) ease-in-out
+      infinite;
+    pointer-events: none;
+  }
+
+  :where(button.trace-icon-only) {
+    padding-inline: var(--trace-button-padding-block);
+    aspect-ratio: 1;
+  }
+
+  :where(
+    button.trace-small,
+    input[type="button"].trace-small,
+    input[type="submit"].trace-small,
+    input[type="reset"].trace-small
+  ) {
+    --trace-button-font-size: 0.875rem;
+    --trace-button-line-height: 1.25rem;
+    --trace-button-padding-block: 0.25rem;
+    --trace-button-padding-inline: 0.5rem;
+  }
+
+  :where(
+    button.trace-large,
+    input[type="button"].trace-large,
+    input[type="submit"].trace-large,
+    input[type="reset"].trace-large
+  ) {
+    --trace-button-font-size: 1.125rem;
+    --trace-button-line-height: 1.75rem;
+    --trace-button-padding-block: 0.5rem;
+    --trace-button-padding-inline: 1rem;
+  }
+
+  :where(
+    button.trace-primary,
+    input[type="button"].trace-primary,
+    input[type="submit"].trace-primary,
+    input[type="reset"].trace-primary
+  ) {
+    --trace-button-color: light-dark(
+      var(--trace-primary-darker),
+      var(--trace-secondary)
+    );
+    --trace-button-contrast: light-dark(
+      var(--trace-secondary),
+      var(--trace-primary-dark)
+    );
+    --trace-button-outline-color: var(--trace-button-color);
+  }
+
+  :where(
+    button.trace-secondary,
+    input[type="button"].trace-secondary,
+    input[type="submit"].trace-secondary,
+    input[type="reset"].trace-secondary
+  ) {
+    --trace-button-color: var(--trace-primary-light);
+    --trace-button-contrast: var(--trace-secondary-lighter);
+    --trace-button-outline-color: var(--trace-button-color);
+  }
+
+  :where(
+    button.trace-danger,
+    input[type="button"].trace-danger,
+    input[type="submit"].trace-danger,
+    input[type="reset"].trace-danger
+  ) {
+    --trace-button-color: var(--trace-danger);
+    --trace-button-contrast: var(--trace-neutral-lighter);
+    --trace-button-outline-color: var(--trace-button-color);
+  }
+
+  :where(
+    button.trace-outline,
+    input[type="button"].trace-outline,
+    input[type="submit"].trace-outline,
+    input[type="reset"].trace-outline
+  ) {
+    --trace-button-bg: transparent;
+    --trace-button-text: var(--trace-button-outline-color);
+    --trace-button-border: var(--trace-button-outline-color);
+  }
+
+  :where(
+    button.trace-outline:hover:not(:disabled):not([aria-busy="true"]),
+    input[type="button"].trace-outline:hover:not(:disabled),
+    input[type="submit"].trace-outline:hover:not(:disabled),
+    input[type="reset"].trace-outline:hover:not(:disabled),
+    button.trace-outline:active:not(:disabled):not([aria-busy="true"]),
+    input[type="button"].trace-outline:active:not(:disabled),
+    input[type="submit"].trace-outline:active:not(:disabled),
+    input[type="reset"].trace-outline:active:not(:disabled),
+    button.trace-outline[aria-busy="true"]
+  ) {
+    background-color: var(--trace-button-color);
+    color: var(--trace-button-contrast);
+    border-color: var(--trace-button-color);
+  }
+
+  :where(button.trace-outline[aria-busy="true"]) {
+    --trace-button-text: var(--trace-button-contrast);
+    --trace-button-loader-color: var(--trace-button-contrast);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :where(button[aria-busy="true"] > span.trace-icon)::after {
+      animation: none;
+    }
+  }
+
+  @media (forced-colors: active) {
+    :where(button[aria-busy="true"] > span.trace-icon)::after {
+      background-color: ButtonText;
+    }
+  }
+  :where(button[aria-busy="true"]:has(> span.trace-icon)) {
+    color: var(--trace-button-text, var(--trace-button-contrast));
+  }
+  :where(button[aria-busy="true"]:has(> span.trace-icon))::after {
+    content: none;
+  }
+  :where(button[aria-busy="true"]:has(> span.trace-icon) > *) {
+    opacity: 1;
+  }
+  :where(button.trace-outline[aria-busy="true"]:not(:has(> span.trace-icon))) {
+    color: transparent;
+  }
+
+  @media (forced-colors: active) {
+    :where(button[aria-busy="true"]:has(> span.trace-icon):disabled) {
+      border-color: GrayText;
+    }
+
+    :where(button[aria-busy="true"]:has(> span.trace-icon)) {
+      forced-color-adjust: auto;
+    }
+
+    :where(
+      button.trace-outline[aria-busy="true"]:not(:has(> span.trace-icon))
+    ) {
+      background-color: ButtonFace;
+      border-color: ButtonText;
+    }
+  }
+}

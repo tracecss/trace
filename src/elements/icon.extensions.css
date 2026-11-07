@@ -1,0 +1,22 @@
+@layer trace.extensions {
+  :where(.trace-icon) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: var(--trace-icon-size, 1em);
+    block-size: var(--trace-icon-size, 1em);
+    flex-shrink: 0;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  :where(.trace-icon > svg, .trace-icon > img) {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: contain;
+  }
+  :where(.trace-icon-directional:dir(rtl)) {
+    transform: scaleX(-1);
+  }
+}
