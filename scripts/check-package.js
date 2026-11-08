@@ -23,12 +23,16 @@ for (const path of [
   "LICENSE",
   "src/index.css",
   "src/classless.css",
+  "skills/trace-css/SKILL.md",
+  "skills/trace-css/agents/openai.yaml",
+  "skills/trace-css/references/integration.md",
+  "skills/trace-css/references/components.md",
 ]) {
   assert(files.has(path), `Missing ${path}`);
 }
 for (const path of files) {
   assert(
-    /^(dist\/[^/]+\.css|src\/.+\.css|assets\/trace-logo\.svg|package\.json|README\.md|LICENSE)$/.test(
+    /^(dist\/[^/]+\.css|src\/.+\.css|skills\/trace-css\/(SKILL\.md|agents\/openai\.yaml|references\/(integration|components)\.md)|assets\/trace-logo\.svg|package\.json|README\.md|LICENSE)$/.test(
       path,
     ),
     `Unexpected package file: ${path}`,

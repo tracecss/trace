@@ -86,6 +86,17 @@ Choose one build from `dist/`:
 All builds include theme tokens. Minified versions use `.min.css`.
 Conditional builds require browser support for `@scope`.
 
+## Agent skill
+
+The [Trace CSS skill](skills/trace-css/SKILL.md) helps coding agents use the library.
+Install it in your project:
+
+```sh
+npx skills add tracecss/trace --skill trace-css
+```
+
+Add `-g` to install globally. Invoke with `$trace-css`.
+
 ## Browser targets
 
 Chrome / Edge 123+, Firefox 146+, Safari / iOS Safari 17.5+.

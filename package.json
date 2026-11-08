@@ -30,6 +30,7 @@
   "files": [
     "dist",
     "src",
+    "skills/trace-css",
     "assets/trace-logo.svg"
   ],
   "style": "./dist/trace.css",
