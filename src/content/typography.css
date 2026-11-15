@@ -18,6 +18,14 @@
       var(--trace-neutral-light),
       var(--trace-neutral-dark)
     );
+    --trace-code-border: light-dark(
+      var(--trace-typography-border),
+      var(--trace-neutral-light)
+    );
+    --trace-code-bg: light-dark(
+      oklch(from var(--trace-neutral-darker) l c h / 4%),
+      oklch(from var(--trace-neutral-lighter) l c h / 7%)
+    );
     --trace-mark-bg: var(--trace-secondary-lighter);
     --trace-mark-text: var(--trace-neutral-darker);
     --trace-kbd-bg: light-dark(
@@ -97,6 +105,14 @@
 
   :where(code, pre, kbd, samp) {
     font-family: var(--trace-font-code);
+  }
+
+  :where(code:not(pre code)) {
+    padding-inline: 0.25em;
+    border: 1px solid var(--trace-code-border);
+    border-radius: var(--trace-radius-sm);
+    background-color: var(--trace-code-bg);
+    box-decoration-break: clone;
   }
 
   :where(pre) {

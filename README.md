@@ -14,6 +14,10 @@
 
 A CSS library for native HTML elements. No JavaScript required.
 
+## [Trace CSS Documentation](http://tracecss.com/)
+
+Find the latest installation guides, usage examples, and theme customization reference.
+
 ## Features
 
 - Native HTML styling with optional class-based extensions.
